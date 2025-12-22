@@ -1,0 +1,14 @@
+# Raw and derived data
+/data/raw_s3/
+/data/datasets/
+/data/reports/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local env
+.env
+
+# OS
+.DS_Store
