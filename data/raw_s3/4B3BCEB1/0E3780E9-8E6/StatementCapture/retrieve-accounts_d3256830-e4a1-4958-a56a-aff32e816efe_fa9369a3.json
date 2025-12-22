@@ -1,0 +1,673 @@
+{
+  "type": "list",
+  "data": [
+    {
+      "type": "account",
+      "id": "f527cc05-fcb2-4bb1-9479-282f2824696b",
+      "accountNo": "12345612345678",
+      "name": "Mortgage 746833",
+      "displayName": "",
+      "currency": "AUD",
+      "balance": "-773162.25",
+      "availableFunds": "11396.00",
+      "lastUpdated": "2025-12-02T13:00:00Z",
+      "institution": "AU00000",
+      "creditLimit": "800000.00",
+      "class": {
+        "type": "mortgage",
+        "product": "Hooli Home Loan"
+      },
+      "transactionIntervals": [
+        {
+          "from": "2023-12-04",
+          "to": "2025-12-03"
+        }
+      ],
+      "accountHolder": "Max Wentworth-Smith & Paul Wentworth-Smith",
+      "accountOwnership": "TWO_PARTY",
+      "bsb": "",
+      "unmaskedAccNum": "",
+      "maskedNumber": "",
+      "creationDate": "",
+      "depositRate": "",
+      "lendingRate": "0.0575",
+      "bundleName": "",
+      "specificAccountUType": "",
+      "purses": null,
+      "amortisedLimit": "",
+      "isOwned": true,
+      "connection": "3c1a24f3-485f-451c-8b7e-fda4e84a06e8",
+      "status": "available",
+      "meta": {
+        "fees": [
+          {
+            "name": "Lodgement Fee",
+            "feeType": "EVENT",
+            "amount": "160.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Enforcement expenses",
+            "feeType": "EVENT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Guarantee Administration Fee",
+            "feeType": "EVENT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Late Payment Fee",
+            "feeType": "EVENT",
+            "amount": "25.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Lenders Mortgage Insurance",
+            "feeType": "UPFRONT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Loan Administration Charge",
+            "feeType": "PERIODIC",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Loan Approval Fee",
+            "feeType": "EVENT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Progress Payment Fee",
+            "feeType": "EVENT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Settlement Fee",
+            "feeType": "EVENT",
+            "amount": "160.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Renegotiation Fee",
+            "feeType": "EVENT",
+            "amount": "0.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          }
+        ],
+        "depositRates": null,
+        "lendingRates": [
+          {
+            "lendingRateType": "VARIABLE",
+            "rate": "0.0575",
+            "applicationFrequency": "P1M",
+            "comparisonRate": "",
+            "calculationFrequency": "",
+            "interestPaymentDue": "",
+            "repaymentType": "",
+            "loanPurpose": "",
+            "tiers": null
+          }
+        ],
+        "termDeposits": null,
+        "addresses": null,
+        "loan": {
+          "startDate": "2020-12-30",
+          "endDate": "2053-04-18",
+          "repaymentType": "PRINCIPAL_AND_INTEREST",
+          "minInstalmentAmount": "3550.75",
+          "originalLoanAmount": "694592.00",
+          "originalLoanCurrency": "AUD",
+          "nextInstalmentDate": "",
+          "minInstalmentCurrency": "AUD",
+          "maxRedraw": "10903.15",
+          "maxRedrawCurrency": "AUD",
+          "minRedraw": "0.00",
+          "minRedrawCurrency": "AUD",
+          "repaymentFrequency": "P1M",
+          "offsetAccountIds": [],
+          "offsetAccountEnabled": false
+        },
+        "creditCard": null,
+        "features": null
+      },
+      "links": {
+        "self": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/accounts/f527cc05-fcb2-4bb1-9479-282f2824696b",
+        "transactions": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/transactions?filter=account.id.eq('f527cc05-fcb2-4bb1-9479-282f2824696b')",
+        "connection": null,
+        "institution": "/institutions/AU00000",
+        "statements": []
+      }
+    },
+    {
+      "type": "account",
+      "id": "8891005a-8533-4519-8660-c76aeff939b3",
+      "accountNo": "23456723456789",
+      "name": "Credit Card 13000",
+      "displayName": "",
+      "currency": "AUD",
+      "balance": "-1179.45",
+      "availableFunds": "-1179.45",
+      "lastUpdated": "2025-12-02T13:00:00Z",
+      "institution": "AU00000",
+      "creditLimit": "20000.00",
+      "class": {
+        "type": "credit-card",
+        "product": "Hooli Visa"
+      },
+      "transactionIntervals": [
+        {
+          "from": "2023-12-04",
+          "to": "2025-12-03"
+        }
+      ],
+      "accountHolder": "Max Wentworth-Smith",
+      "accountOwnership": "UNKNOWN",
+      "bsb": "",
+      "unmaskedAccNum": "",
+      "maskedNumber": "",
+      "creationDate": "",
+      "depositRate": "",
+      "lendingRate": "",
+      "bundleName": "",
+      "specificAccountUType": "",
+      "purses": null,
+      "amortisedLimit": "",
+      "isOwned": true,
+      "connection": "3c1a24f3-485f-451c-8b7e-fda4e84a06e8",
+      "status": "available",
+      "meta": {
+        "fees": [
+          {
+            "name": "Late Payment Administration Fee",
+            "feeType": "EVENT",
+            "amount": "25.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Paper Statement Fee",
+            "feeType": "PERIODIC",
+            "amount": "1.25",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Notice of Demand Fee",
+            "feeType": "EVENT",
+            "amount": "50.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Annual Fee",
+            "feeType": "PERIODIC",
+            "amount": "59.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Customer Trace Fee",
+            "feeType": "EVENT",
+            "amount": "10.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Credit Card Replacement Fee",
+            "feeType": "EVENT",
+            "amount": "25.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          }
+        ],
+        "depositRates": null,
+        "lendingRates": [
+          {
+            "lendingRateType": "PURCHASE",
+            "rate": "0.2024",
+            "applicationFrequency": "P1M",
+            "comparisonRate": "",
+            "calculationFrequency": "",
+            "interestPaymentDue": "",
+            "repaymentType": "",
+            "loanPurpose": "",
+            "tiers": null
+          },
+          {
+            "lendingRateType": "CASH_ADVANCE",
+            "rate": "0.2124",
+            "applicationFrequency": "P1M",
+            "comparisonRate": "",
+            "calculationFrequency": "",
+            "interestPaymentDue": "",
+            "repaymentType": "",
+            "loanPurpose": "",
+            "tiers": null
+          }
+        ],
+        "termDeposits": null,
+        "addresses": null,
+        "loan": null,
+        "creditCard": {
+          "minPaymentAmount": "117.00",
+          "paymentDueAmount": "5847.00",
+          "paymentCurrency": "AUD",
+          "paymentDueDate": "2023-12-12"
+        },
+        "features": null
+      },
+      "links": {
+        "self": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/accounts/8891005a-8533-4519-8660-c76aeff939b3",
+        "transactions": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/transactions?filter=account.id.eq('8891005a-8533-4519-8660-c76aeff939b3')",
+        "connection": null,
+        "institution": "/institutions/AU00000",
+        "statements": []
+      }
+    },
+    {
+      "type": "account",
+      "id": "5c51b37f-5615-4929-b434-a0da3c53c49c",
+      "accountNo": "34567834567890",
+      "name": "Savings 123890",
+      "displayName": "",
+      "currency": "AUD",
+      "balance": "1007.00",
+      "availableFunds": "1007.00",
+      "lastUpdated": "2025-12-02T13:00:00Z",
+      "institution": "AU00000",
+      "creditLimit": "",
+      "class": {
+        "type": "savings",
+        "product": "Hooli Saver"
+      },
+      "transactionIntervals": [
+        {
+          "from": "2023-12-04",
+          "to": "2025-12-03"
+        }
+      ],
+      "accountHolder": "Max Wentworth-Smith",
+      "accountOwnership": "ONE_PARTY",
+      "bsb": "",
+      "unmaskedAccNum": "",
+      "maskedNumber": "",
+      "creationDate": "",
+      "depositRate": "0.0055",
+      "lendingRate": "",
+      "bundleName": "",
+      "specificAccountUType": "",
+      "purses": null,
+      "amortisedLimit": "",
+      "isOwned": true,
+      "connection": "3c1a24f3-485f-451c-8b7e-fda4e84a06e8",
+      "status": "available",
+      "meta": {
+        "fees": [
+          {
+            "name": "Paper Statement Fee",
+            "feeType": "EVENT",
+            "amount": "1.50",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          }
+        ],
+        "depositRates": [
+          {
+            "depositRateType": "VARIABLE",
+            "rate": "0.0055",
+            "applicationFrequency": "P1M",
+            "calculationFrequency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "tiers": null
+          },
+          {
+            "depositRateType": "BONUS",
+            "rate": "0.0495",
+            "applicationFrequency": "P1M",
+            "calculationFrequency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "tiers": null
+          }
+        ],
+        "lendingRates": null,
+        "termDeposits": null,
+        "addresses": null,
+        "loan": null,
+        "creditCard": null,
+        "features": null
+      },
+      "links": {
+        "self": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/accounts/5c51b37f-5615-4929-b434-a0da3c53c49c",
+        "transactions": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/transactions?filter=account.id.eq('5c51b37f-5615-4929-b434-a0da3c53c49c')",
+        "connection": null,
+        "institution": "/institutions/AU00000",
+        "statements": []
+      }
+    },
+    {
+      "type": "account",
+      "id": "66d22c51-b1dd-4540-857b-e511afdc1a5e",
+      "accountNo": "45678945678901",
+      "name": "Transaction 14000",
+      "displayName": "",
+      "currency": "AUD",
+      "balance": "21652.43",
+      "availableFunds": "21652.43",
+      "lastUpdated": "2025-12-02T13:00:00Z",
+      "institution": "AU00000",
+      "creditLimit": "",
+      "class": {
+        "type": "transaction",
+        "product": "Hooli Transaction"
+      },
+      "transactionIntervals": [
+        {
+          "from": "2023-12-04",
+          "to": "2025-12-03"
+        }
+      ],
+      "accountHolder": "Max Wentworth-Smith",
+      "accountOwnership": "UNKNOWN",
+      "bsb": "",
+      "unmaskedAccNum": "",
+      "maskedNumber": "",
+      "creationDate": "",
+      "depositRate": "",
+      "lendingRate": "",
+      "bundleName": "",
+      "specificAccountUType": "",
+      "purses": null,
+      "amortisedLimit": "",
+      "isOwned": true,
+      "connection": "3c1a24f3-485f-451c-8b7e-fda4e84a06e8",
+      "status": "available",
+      "meta": {
+        "fees": [
+          {
+            "name": "Unpaid cheque or debit fee",
+            "feeType": "EVENT",
+            "amount": "5.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Unpaid scheduled payment fee",
+            "feeType": "EVENT",
+            "amount": "5.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "International purchase fee",
+            "feeType": "TRANSACTION",
+            "amount": "3.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Overdraw Fee",
+            "feeType": "EVENT",
+            "amount": "15.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Account fee",
+            "feeType": "PERIODIC",
+            "amount": "4.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Access fee - Overseas ATMs",
+            "feeType": "WITHDRAWAL",
+            "amount": "2.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Access fee - Overseas cash withdrawals",
+            "feeType": "WITHDRAWAL",
+            "amount": "5.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Staff assisted withdrawals",
+            "feeType": "WITHDRAWAL",
+            "amount": "3.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          },
+          {
+            "name": "Cheque negotiated fee",
+            "feeType": "TRANSACTION",
+            "amount": "3.00",
+            "balanceRate": "",
+            "transactionRate": "",
+            "accruedRate": "",
+            "accrualFrequency": "",
+            "currency": "",
+            "additionalValue": "",
+            "additionalInfo": "",
+            "additionalInfoUri": "",
+            "discounts": null
+          }
+        ],
+        "depositRates": null,
+        "lendingRates": null,
+        "termDeposits": null,
+        "addresses": null,
+        "loan": null,
+        "creditCard": null,
+        "features": null
+      },
+      "links": {
+        "self": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/accounts/66d22c51-b1dd-4540-857b-e511afdc1a5e",
+        "transactions": "/users/3c09f0fa-308f-45c7-af7f-08660eced122/transactions?filter=account.id.eq('66d22c51-b1dd-4540-857b-e511afdc1a5e')",
+        "connection": null,
+        "institution": "/institutions/AU00000",
+        "statements": []
+      }
+    }
+  ],
+  "links": {
+    "self": "https://au-api.basiq.io/users/3c09f0fa-308f-45c7-af7f-08660eced122/accounts"
+  }
+}

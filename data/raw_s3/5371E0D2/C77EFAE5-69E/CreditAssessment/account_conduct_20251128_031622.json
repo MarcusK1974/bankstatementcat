@@ -1,0 +1,407 @@
+{
+  "application_number": "C77EFAE5-69E",
+  "decision": "APPROVED",
+  "account_conduct": {
+    "rule_results": [
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_001",
+        "metric_id": "ME001",
+        "description": "# OF IDENTIFIED SALARY SOURCES",
+        "data_value": 2,
+        "condition": ">= 1",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_002",
+        "metric_id": "ME003",
+        "description": "SALARY HAS BEEN STABLE FOR (MONTHS)",
+        "data_value": 3,
+        "condition": ">= 0",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_003",
+        "metric_id": "ME017",
+        "description": "# SACC LOANS",
+        "data_value": 0,
+        "condition": "<= 1",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_004",
+        "metric_id": "ME019",
+        "description": "# FINANCIAL DISHONOURS",
+        "data_value": 0,
+        "condition": "<= 2",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_005",
+        "metric_id": "ME020",
+        "description": "% OF INCOME SPENT ON HIGH RISK ACTIVITIES",
+        "data_value": 0.0,
+        "condition": "<= 10",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_006",
+        "description": "Spending debits is at least 70% of total debits",
+        "data_value": 88.1,
+        "condition": ">= 70%",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_007",
+        "description": "SALARY HAS BEEN STABLE FOR 4 MONTHS",
+        "data_value": 3,
+        "condition": ">= 0 months",
+        "result": "pass",
+        "hard_rule": true,
+        "details": {
+          "reference_date": "2025-11-28",
+          "last_salary_date": "2025-10-30",
+          "stable_months": 3
+        }
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_008",
+        "description": "NO COLLECTION AGENCY ACTIVITY",
+        "data_value": 0,
+        "condition": "== 0",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_009",
+        "description": "NON-DISCRETIONARY EXPENSES CHECK",
+        "total_score": 3,
+        "condition": ">= 1",
+        "result": "pass",
+        "component_results": [
+          {
+            "metric_id": "ME028",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: GROCERIES",
+            "metric_value": false,
+            "score": 1
+          },
+          {
+            "metric_id": "ME029",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: TELECOMMUNICATION",
+            "metric_value": false,
+            "score": 1
+          },
+          {
+            "metric_id": "ME030",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: UTILITIES",
+            "metric_value": false,
+            "score": 1
+          }
+        ],
+        "hard_rule": false
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_010",
+        "description": "PAYMENTS TO INSOLVENCY FIRMS",
+        "data_value": 0,
+        "condition": "== 0",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_011",
+        "description": "CHECK GOVERNMENT BENEFITS",
+        "data_value": 0.0,
+        "condition": "<= 49%",
+        "result": "pass",
+        "hard_rule": true
+      },
+      {
+        "rule_id": "ACCOUNT_CONDUCT_RULE_012",
+        "description": "Salary must be at least 51% of total income each month",
+        "data_value": "Last 4 months checked",
+        "condition": "Monthly ratio >= 51%",
+        "result": "pass",
+        "hard_rule": true,
+        "reference_date": "2025-11-28",
+        "details": {
+          "months_checked": [
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10"
+          ],
+          "monthly_ratios": {
+            "2025-07": {
+              "ratio": 99.6,
+              "numerator": 19800.0,
+              "denominator": 19870.5
+            },
+            "2025-08": {
+              "ratio": 99.4,
+              "numerator": 11800.0,
+              "denominator": 11870.5
+            },
+            "2025-09": {
+              "ratio": 99.4,
+              "numerator": 11800.0,
+              "denominator": 11870.5
+            },
+            "2025-10": {
+              "ratio": 99.5,
+              "numerator": 13700.0,
+              "denominator": 13770.5
+            }
+          }
+        }
+      }
+    ],
+    "rules_configuration": [
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_001",
+        "metric_id": "ME001",
+        "type": "report_metric",
+        "description": "# OF IDENTIFIED SALARY SOURCES",
+        "condition": {
+          "operator": ">=",
+          "value": 1
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_002",
+        "metric_id": "ME003",
+        "type": "report_metric",
+        "description": "SALARY HAS BEEN STABLE FOR (MONTHS)",
+        "condition": {
+          "operator": ">=",
+          "value": 0
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_003",
+        "metric_id": "ME017",
+        "type": "report_metric",
+        "description": "# SACC LOANS",
+        "condition": {
+          "operator": "<=",
+          "value": 1
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_004",
+        "metric_id": "ME019",
+        "type": "report_metric",
+        "description": "# FINANCIAL DISHONOURS",
+        "condition": {
+          "operator": "<=",
+          "value": 2
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_005",
+        "metric_id": "ME020",
+        "type": "report_metric",
+        "description": "% OF INCOME SPENT ON HIGH RISK ACTIVITIES",
+        "condition": {
+          "operator": "<=",
+          "value": 10
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_006",
+        "type": "calculation",
+        "description": "Spending debits is at least 70% of total debits",
+        "condition": {
+          "type": "percentage",
+          "operator": ">=",
+          "value": 70,
+          "numerator": {
+            "type": "transaction_count",
+            "categories": [
+              "EXP-002",
+              "EXP-007",
+              "EXP-008",
+              "EXP-010",
+              "EXP-011",
+              "EXP-012",
+              "EXP-014",
+              "EXP-015",
+              "EXP-016",
+              "EXP-017",
+              "EXP-018",
+              "EXP-019",
+              "EXP-021",
+              "EXP-024",
+              "EXP-027",
+              "EXP-028",
+              "EXP-030",
+              "EXP-031",
+              "EXP-035",
+              "EXP-036",
+              "EXP-038",
+              "EXP-040",
+              "EXP-041",
+              "EXP-051",
+              "EXP-052",
+              "EXP-054",
+              "EXP-055"
+            ]
+          },
+          "denominator": {
+            "type": "transaction_count",
+            "include_all": true
+          }
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_007",
+        "type": "salary_history",
+        "description": "SALARY HAS BEEN STABLE FOR 4 MONTHS",
+        "condition": {
+          "category": "INC-009",
+          "min_months": 0,
+          "field": "analysis/amount/stableMonths"
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_008",
+        "type": "group_metric",
+        "group_id": "EXP-005",
+        "description": "NO COLLECTION AGENCY ACTIVITY",
+        "condition": {
+          "field": "analysis/summary/transactionCount",
+          "operator": "==",
+          "value": 0
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_009",
+        "type": "composite_score",
+        "description": "NON-DISCRETIONARY EXPENSES CHECK",
+        "components": [
+          {
+            "metric_id": "ME028",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: GROCERIES",
+            "scoring": {
+              "true": -1,
+              "false": 1
+            }
+          },
+          {
+            "metric_id": "ME029",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: TELECOMMUNICATION",
+            "scoring": {
+              "true": -1,
+              "false": 1
+            }
+          },
+          {
+            "metric_id": "ME030",
+            "description": "MISSING NON-DISCRETIONARY EXPENSES: UTILITIES",
+            "scoring": {
+              "true": -1,
+              "false": 1
+            }
+          }
+        ],
+        "condition": {
+          "operator": ">=",
+          "value": 1
+        },
+        "hard_rule": false
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_010",
+        "type": "group_metric",
+        "group_id": "EXP-020",
+        "description": "PAYMENTS TO INSOLVENCY FIRMS",
+        "condition": {
+          "field": "analysis/summary/transactionCount",
+          "operator": "==",
+          "value": 0
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_011",
+        "type": "calculation",
+        "description": "CHECK GOVERNMENT BENEFITS",
+        "condition": {
+          "type": "percentage",
+          "operator": "<=",
+          "value": 49,
+          "numerator": {
+            "type": "metric_count",
+            "metric_ids": [
+              "ME005",
+              "ME006",
+              "ME007"
+            ]
+          },
+          "denominator": {
+            "type": "metric_count",
+            "metric_ids": [
+              "ME036"
+            ]
+          }
+        },
+        "hard_rule": true
+      },
+      {
+        "id": "ACCOUNT_CONDUCT_RULE_012",
+        "type": "monthly_ratio",
+        "description": "Salary must be at least 51% of total income each month",
+        "condition": {
+          "operator": ">=",
+          "value": 51,
+          "min_months": 4,
+          "numerator": {
+            "groups": [
+              "INC-009"
+            ],
+            "include_all": false
+          },
+          "denominator": {
+            "groups": [
+              "INC-001",
+              "INC-002",
+              "INC-003",
+              "INC-004",
+              "INC-005",
+              "INC-006",
+              "INC-007",
+              "INC-008",
+              "INC-009",
+              "INC-010",
+              "INC-012",
+              "INC-013",
+              "INC-014",
+              "INC-015",
+              "INC-016",
+              "INC-018",
+              "INC-019",
+              "INC-020",
+              "INC-021"
+            ],
+            "include_all": false
+          }
+        },
+        "hard_rule": true
+      }
+    ]
+  },
+  "affordability_report_location": "s3://billie-applications-nonprod/demo/5371E0D2/C77EFAE5-69E/AffordabilityReports/6e38b188-c98c-44db-a95c-37463bbd405a.json"
+}

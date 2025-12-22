@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billie Pay Advance Agreement</title>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            margin: 5px;
+            color: #333;
+            background: white;
+            font-size: 14px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        
+        .intro-text {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px solid #000;
+            text-align: justify;
+            font-size: 13px;
+        }
+        
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 2px solid #000;
+            font-size: 13px;
+        }
+        
+        .details-table th,
+        .details-table td {
+            border: 1px solid #000;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .details-table th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .amount {
+            font-weight: bold;
+            color: #0056b3;
+        }
+        
+        .signature-section {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .signature-box {
+            width: 45%;
+            border-top: 2px solid #000;
+            padding-top: 6px;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .terms-section {
+            margin-top: 12px;
+            padding: 8px;
+            border: 1px solid #000;
+        }
+        
+        .terms-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+        
+        .terms-list {
+            list-style-type: decimal;
+            margin-left: 24px;
+            padding-left: 0;
+        }
+        
+        .terms-list li {
+            margin-bottom: 6px;
+            text-align: justify;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+        
+        .sub-terms-list {
+            list-style-type: lower-alpha;
+            margin-left: 24px;
+            margin-top: 4px;
+            padding-left: 0;
+        }
+        
+        .sub-terms-list li {
+            margin-bottom: 3px;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .repayment-details {
+            margin: 8px 0;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #0056b3;
+            font-size: 13px;
+        }
+        
+        .repayment-details ul {
+            margin: 6px 0;
+            padding-left: 16px;
+        }
+        
+        .repayment-details li {
+            margin-bottom: 3px;
+            font-size: 12px;
+        }
+        
+        /* PDF-only elements - completely hidden in HTML */
+        .pdf-only {
+            display: none;
+            visibility: hidden;
+        }
+        
+        .logo-container {
+            display: none;
+            visibility: hidden;
+            text-align: right;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+        
+        .logo-container img {
+            max-height: 40px;
+            width: auto;
+        }
+        
+        .logo-fallback {
+            text-align: right;
+            font-weight: bold;
+            color: #0056b3;
+            font-size: 18px;
+            font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .pdf-footer {
+            display: none;
+            visibility: hidden;
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            background: white;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        /* Additional spacing optimizations */
+        ol[style*="lower-roman"] {
+            margin-left: 24px;
+            padding-left: 0;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        
+        ol[style*="lower-roman"] li {
+            margin-bottom: 2px;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        
+        .terms-list > li > strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .terms-list > li > ol {
+            margin-top: 3px;
+        }
+        
+        /* Reduce paragraph spacing within terms */
+        .terms-list p {
+            margin: 3px 0;
+        }
+        
+        /* Tighter link spacing */
+        .terms-list a {
+            text-decoration: underline;
+        }
+        
+        /* Mobile optimization */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 5px;
+                font-size: 13px;
+            }
+            
+            .title {
+                font-size: 18px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .details-table th,
+            .details-table td {
+                padding: 6px;
+                font-size: 12px;
+            }
+            
+            .terms-list li {
+                font-size: 12px;
+            }
+            
+            .sub-terms-list li {
+                font-size: 11px;
+            }
+        }
+        
+        @media print {
+            @page {
+                margin: 25mm 20mm 10mm 20mm;
+                size: A4;
+                @bottom-right {
+                    content: "Page " counter(page);
+                    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+                    font-size: 9px;
+                    font-weight: normal;
+                    color: #555;
+                    margin-bottom: 5mm;
+                }
+            }
+            
+            body {
+                margin: 0;
+                font-size: 12px;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .page-break-avoid {
+                page-break-inside: avoid;
+            }
+            
+            /* Content spacing handled by page margins */
+            
+            /* Show PDF-only elements when printing/generating PDF */
+            .pdf-only,
+            .logo-container,
+            .pdf-footer {
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            .logo-container {
+                text-align: right;
+                margin-bottom: 15px;
+                padding: 10px 0;
+                border-bottom: 2px solid #0056b3;
+            }
+            
+            .logo-container img {
+                max-height: 35px;
+                width: auto;
+                opacity: 0.9;
+            }
+            
+            .pdf-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 9px;
+                color: #555;
+                border-top: 1px solid #ccc;
+                padding: 8px 20px;
+                background: white;
+                font-weight: 500;
+                height: 25px;
+                line-height: 1.2;
+                z-index: 1000;
+            }
+            
+            .pdf-footer .company-name {
+                font-weight: bold;
+                color: #0056b3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Section (PDF only) -->
+    <div class="logo-container pdf-only">
+        <img src="assets/billie_logo.png" alt="Billie Logo" />
+    </div>
+    
+    <!-- Header Section -->
+    <div class="header">
+        <div class="title">Pay Advance Agreement - Terms and Conditions</div>
+    </div>
+    
+    <div class="header">
+        <div class="subtitle">Pay Advance Repayment Schedule</div>
+    </div>
+    
+    <!-- Introduction Text -->
+    <div class="intro-text">
+        <p>
+            This schedule (your <strong>"Pay Advance Repayment Schedule"</strong>) sets out the details of your Pay Advance, 
+            where Billie sends the proceeds of your Pay Advance, and your repayment obligations. The table below details 
+            your repayments. Review this schedule and the entire Terms and Conditions carefully, especially your 
+            <strong>Designated Salary Account</strong>, before accepting.
+        </p>
+    </div>
+    
+    <!-- Agreement Details Table -->
+    <table class="details-table">
+        <thead>
+            <tr>
+                <th>Detail</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Commencement Date</strong></td>
+                <td>2025-12-03T01:35:34.552406</td>
+            </tr>
+            <tr>
+                <td><strong>Customer Name</strong></td>
+                <td>Jim Jones</td>
+            </tr>
+            <tr>
+                <td><strong>Customer Address</strong></td>
+                <td>35 Mascot Ave, Bonbeach VIC 3196, Australia</td>
+            </tr>
+            <tr>
+                <td><strong>Pay Advance</strong></td>
+                <td class="amount">$500.00</td>
+            </tr>
+            <tr>
+                <td><strong>Transaction Fee</strong></td>
+                <td class="amount">$25.00</td>
+            </tr>
+            <tr>
+                <td><strong>Total Amount to Repay</strong></td>
+                <td class="amount">$525.00</td>
+            </tr>
+            <tr>
+                <td><strong>Repayment Frequency</strong></td>
+                <td>Weekly</td>
+            </tr>
+            <tr>
+                <td><strong>Number of Repayments</strong></td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td><strong>Repayment Schedule and Due Dates</strong></td>
+                <td>
+                        - Instalment 1: $75.00 due on 10-12-25<br/>
+                        - Instalment 2: $75.00 due on 17-12-25<br/>
+                        - Instalment 3: $75.00 due on 24-12-25<br/>
+                        - Instalment 4: $75.00 due on 31-12-25<br/>
+                        - Instalment 5: $75.00 due on 07-01-26<br/>
+                        - Instalment 6: $75.00 due on 14-01-26<br/>
+                        - Instalment 7: $75.00 due on 19-01-26<br/>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Term</strong></td>
+                <td>45 days</td>
+            </tr>
+            <tr>
+                <td><strong>Reference Number</strong></td>
+                <td>0E3780E9-8E6</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Page Break before Designated Salary Account -->
+    <div class="page-break"></div>
+    
+    <!-- Designated Salary Account Section -->
+    <div class="section-title">Designated Salary Account for Loan Disbursement</div>
+    <div class="repayment-details">
+        <p>Billie will transfer your Pay Advance to this account (Designated Salary Account), identified as where your salary is paid based on your application:</p>
+        <ul>
+            <li><strong>Account Name:</strong> Max Wentworth-Smith</li>
+            <li><strong>BSB:</strong> 456789</li>
+            <li><strong>Account Number:</strong> 45678901</li>
+            <li><strong>Your Responsibility:</strong> By confirming acceptance at the end of this agreement, you confirm this account is correct. Review it carefully before accepting. Contact support@billie.com.au if it's incorrect.</li>
+        </ul>
+    </div>
+    
+    <!-- Repayment Details Section -->
+    <div class="section-title">Repayment Details</div>
+    <div class="repayment-details">
+        <p>You must repay the Pay Advance, including the Transaction Fee, by transferring funds to Billie's account on the due dates in the Pay Advance Schedule:</p>
+        <ul>
+            <li><strong>Bank:</strong> Bank TBD</li>
+            <li><strong>Account Name:</strong> Billie Loans Pty Ltd</li>
+            <li><strong>BSB:</strong> BSB TBD</li>
+            <li><strong>Account Number:</strong> Account TBD</li>
+            <li><strong>Reference:</strong> Reference TBD</li>
+            <li><strong>Your Responsibility:</strong> Transfer each installment by the dates specified in the Pay Advance Repayment Schedule, using the Reference Number to match your payment.</li>
+        </ul>
+    </div>
+    
+    <!-- Terms and Conditions Section -->
+    <div class="terms-section page-break-avoid">
+        <div class="terms-title">Terms and Conditions</div>
+        
+        <ol class="terms-list">
+            <li class="page-break-avoid">
+                <strong>PAY ADVANCE OVERVIEW</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">Billie Loans Pty Ltd ACN 679 740 973 (we, us, or Billie) provides access to a short-term pay advance up to your individual Pay Advance Limit. You may access an amount up to your Pay Advance Limit as a one-time advance, which is the Pay Advance you borrow from us under this Agreement.</li>
+                    <li class="page-break-avoid">We may charge you a transaction fee of up to 5% of your Pay Advance ("Transaction Fee"), as specified in the Pay Advance Repayment Schedule. Billie does not charge interest.</li>
+                    <li class="page-break-avoid">You must repay the Pay Advance (the amount you borrow) and Transaction Fee (together the 'Total Amount to Repay') on the due dates shown in the Pay Advance Repayment Schedule.</li>
+                    <li class="page-break-avoid">You must complete repayment of the Pay Advance (the amount you borrow) and Transaction Fee by the Final Instalment date specified in the Pay Advance Repayment Schedule, within a term not exceeding 60 days.</li>
+                    <li class="page-break-avoid">You must repay the Pay Advance (the amount you borrow) and Transaction Fee by electronic transfers directly to Billie's account, as detailed in the Pay Advance Repayment Schedule, by submitting payment on the due dates specified. Cash, cheques, or other payment methods are not accepted. Use the Reference Number provided in the Schedule to ensure your payment is correctly matched.</li>
+                    <li class="page-break-avoid">Once you repay any portion of the Pay Advance (the amount you borrow) and Transaction Fee, those funds cannot be borrowed or redrawn again under your Pay Advance Limit.</li>
+                    <li class="page-break-avoid">If payment of the Pay Advance (the amount you borrow) and Transaction Fee is not received in Billie's account by the due dates specified in the Pay Advance Repayment Schedule, Billie will not charge late fees but may pursue available remedies, including but not limited to restricting your ability to borrow additional funds under your Pay Advance Limit or established new Pay Advance Limits until all outstanding amounts are repaid.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>YOUR CONSUMER RIGHTS</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">The Pay Advance is exempt from requiring Billie to hold an Australian Credit Licence under the National Consumer Credit Protection Act 2009 (Cth) (NCCPA) and National Credit Code (NCC) because it qualifies for the Short-Term Credit Exemption under section 6(1) of the NCC. This exemption applies as the Pay Advance has a term not greater than 62 days, a Transaction Fee not exceeding 5% of the Pay Advance, and interest charges not exceeding an equivalent of 24% per annum. As a result, you will not have the benefit of consumer credit protections under the NCCPA and NCC for this product.</li>
+                    <li class="page-break-avoid">You retain consumer protections for this product including under the Australian Securities and Investments Commission Act 2001 (Cth) and the Competition and Consumer Act 2010 (Cth), including the Australian Consumer Law.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>YOUR AGREEMENT WITH BILLIE</strong>
+                <ol class="sub-terms-list">
+                    <li>The Pay Advance Agreement consists of:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">these Terms and Conditions, including the Pay Advance Repayment Schedule set out above; and</li>
+                            <li class="page-break-avoid">the <a href="https://billie.loans/terms-and-conditions.html">Terms and Conditions</a> provided on our website at billie.loans, governing the use of the Billie mobile application or website (Website Terms and Conditions).</li>
+                            <li class="page-break-avoid">You should review all parts of the Agreement to understand your obligations.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>ESTABLISHING YOUR PAY ADVANCE</strong>
+                <ol class="sub-terms-list">
+                    <li>Before we fund your Pay Advance, you must meet our requirements, including:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">Agreeing to this Pay Advance Agreement, as defined in Clause 3.1, by clicking 'Accept' at the end of this agreement;</li>
+                            <li class="page-break-avoid">Agreeing to our Privacy Policy, which outlines how we collect and process your data;</li>
+                            <li class="page-break-avoid">Satisfying our lending criteria, as outlined during the application process</li>
+                        </ol>
+                    </li>
+                    <li class="page-break-avoid">We will pay your Pay Advance into the Designated Salary Account which is the account where your salary is paid. You should ensure all information provided is accurate and review these requirements to understand your obligations.</li>
+                    <li class="page-break-avoid">You may submit multiple applications, but we reserve the right to assess and approve each application based on our lending criteria, as outlined in Clause 4.1.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>REPAYING YOUR PAY ADVANCE</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">You must submit repayments of the Pay Advance and Transaction Fee, as defined in Clause 1.3, via manual electronic transfers on the due dates specified in the Pay Advance Repayment Schedule, in accordance with Clause 1.5.</li>
+                    <li class="page-break-avoid">If you submit a part payment that is less than the full amount due on a repayment date as specified in the Pay Advance Repayment Schedule, we will allocate it to the earliest unpaid installment, including any missed payments, before applying it to the current installment.</li>
+                    <li class="page-break-avoid">You must submit all repayments in accordance with the Pay Advance Repayment Schedule in full, without set-off, withholding, or reduction for any reason, except as required by law.</li>
+                    <li class="page-break-avoid">If we propose changes to your Pay Advance Repayment Schedule, we will seek your consent, which you may provide via email to support@billie.com.au or through our chat support.</li>
+                    <li class="page-break-avoid">Your repayments are considered made when we receive the cleared funds in our bank account.</li>
+                    <li class="page-break-avoid">If we receive an overpayment of $1 or more, we will refund the excess amount as soon as practicable, but within 20 business days of becoming aware of it. For overpayments less than $1, due to administrative costs we will refund only upon your request or if the overpayment resulted from our error. Refunds will be returned to the account from which the payment was made or another account you specify and no interest will be paid on any overpayment you make.</li>
+                    <li class="page-break-avoid">You may pay off the full outstanding balance of your Pay Advance, including the Pay Advance and Transaction Fee, without any penalty or early termination fees, at any time two business days after the Pay Advance has been deposited into your Designated Salary Account. To arrange early repayment, please contact us via email at support@billie.com.au or through our chat support to confirm the outstanding balance and coordinate payment via manual electronic transfer.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>DEFAULT</strong>
+                <ol class="sub-terms-list">
+                    <li>Subject to any exemptions in this Agreement, you are in default under this Agreement if:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">You fail to submit any repayment in accordance with the Pay Advance Repayment Schedule and the terms of this Agreement;</li>
+                            <li class="page-break-avoid">You provide false or misleading information in your application</li>
+                            <li class="page-break-avoid">You breach a material term of this Agreement, such as the requirement to submit accurate information under Clause 4.1 or make full repayments under Clause 5.3.</li>
+                        </ol>
+                    </li>
+                    <li class="page-break-avoid">You will not be in default under this Agreement if an Event of Default, as defined in Clause 6.1, was caused by our acts or omissions, such as providing incorrect payment instructions or failing to process your submitted repayment correctly.</li>
+                    <li>If you are in default under this Agreement, as defined in Clause 6.1, we may take one or more of the following actions to recover amounts owing:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">Contact you via email, phone, or in writing to request payment of the outstanding balance, including the Pay Advance and Transaction Fee, in accordance with our <a href="https://billie.loans/privacy-policy.html">Privacy Policy</a>. You may arrange payment via manual electronic transfer by contacting us at support@billie.com.au or through our chat support, and we will provide the necessary payment details</li>
+                            <li class="page-break-avoid">Refer your account to a third-party debt collection agency if the outstanding balance remains unpaid after our attempts to contact you.</li>
+                            <li class="page-break-avoid">If we are required to undertake enforcement action in respect to amounts owed by you, you may be liable for all enforcement expenses reasonably incurred.</li>
+                        </ol>
+                    </li>
+                    <li>If your non-payment is due to genuine hardship, you may contact us at support@billie.com.au or through our chat support to discuss assistance under our <a href="https://billie.loans/hardship.html">Hardship Policy</a>.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>TERM AND TERMINATION</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">This Agreement starts when you accept it, as outlined in Clause 4.1, and continues until you fully repay the Pay Advance and Transaction Fee, as specified in the Pay Advance Repayment Schedule, within a term not exceeding 60 days, or until the Agreement is terminated under Clause 7.2.</li>
+                    <li>We may terminate this Agreement immediately by notifying you via email, phone, or in writing, in accordance with our <a href="https://billie.loans/privacy-policy.html">Privacy Policy</a>, if:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">Changes to applicable regulations, including the National Consumer Credit Protection Act 2009 (Cth), prevent us from continuing to offer the Pay Advance; or</li>
+                            <li class="page-break-avoid">We are directed to do so by a government agency, such as the Australian Securities and Investments Commission (ASIC). Upon termination, any outstanding balance, including the Pay Advance and Transaction Fee, remains repayable under Clause 6.3, and you will have no right to further Pay Advances.</li>
+                            <li class="page-break-avoid">You provide false or misleading information in your application, as defined as an Event of Default under Clause 6.1, and we determine that this breach warrants termination. Upon termination, any outstanding balance, including the Pay Advance and Transaction Fee, become immediately repayable under Clause 6.3, and you will have no right to further Pay Advances.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>WARRANTIES</strong>
+                <ol class="sub-terms-list">
+                    <li>By accepting this Agreement, you represent and warrant to us that:
+                        <ol style="list-style-type: lower-roman; margin-left: 20px;">
+                            <li class="page-break-avoid">All information provided in your application, including financial and personal details, is complete, accurate, and not misleading as of the date you submitted it;</li>
+                            <li class="page-break-avoid">You have the legal capacity and authority to enter into this Agreement;</li>
+                            <li class="page-break-avoid">You are 18 years or older and an Australian citizen or permanent resident;</li>
+                            <li class="page-break-avoid">You are not experiencing financial hardship at the time of your application that would prevent you from repaying the Pay Advance and Transaction Fee as specified in the Pay Advance Repayment Schedule;</li>
+                            <li class="page-break-avoid">You will notify us as soon as reasonably possible of any changes to your name, address, contact details (including email and phone number), employment, or financial situation by contacting us at support@billie.com.au or through our chat support, and you will regularly check these contact details for correspondence from us.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>NOTICES</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">You authorise us to send notices and contact you about the Pay Advance, including for repayment reminders, default notifications, or termination, using the email address, phone number, or other contact details you provide, in accordance with our <a href="https://billie.loans/privacy-policy.html">Privacy Policy</a></li>
+                    <li class="page-break-avoid">You may send notices or communications to us via email to support@billie.com.au or through our chat support.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>AGREEMENT VARIATION</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">This Agreement may only be varied with the consent of both you and us, except as provided in this clause.</li>
+                    <li class="page-break-avoid">We may propose material changes to these Terms, such as introducing new fees, altering the Transaction Fee, or modifying the Pay Advance Repayment Schedule (not exceeding 60 days).</li>
+                    <li class="page-break-avoid">We will notify you via email or phone, as per Clause 9.1, and seek your consent, which you may provide via email to support@billie.com.au or through our chat support.</li>
+                    <li class="page-break-avoid">If you do not consent, you may repay the Pay Advance and Transaction Fee in full, as per Clause 5.7, to terminate this Agreement without cost.</li>
+                    <li class="page-break-avoid">For non-material changes to these Terms, such as procedural updates, we will provide you with 30 days' notice via email or phone, as per Clause 9.1, before implementing the changes.</li>
+                    <li class="page-break-avoid">We may make changes to these Terms immediately without your consent or prior notice to comply with any laws or regulations, including the National Consumer Credit Protection Act 2009 (Cth), and will notify you as soon as practicable thereafter.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>COMPLIANCE WITH LAWS</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">You acknowledge that we are required to comply with the Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (Cth) and related regulations, which may involve identifying and verifying your identity and monitoring your transactions.</li>
+                    <li class="page-break-avoid">You agree to provide all information and documents reasonably requested by us to comply with applicable laws, including anti-money laundering and counter-terrorism financing requirements in Australia or other jurisdictions.</li>
+                    <li class="page-break-avoid">You consent to us disclosing your information or transaction details to regulatory authorities, such as AUSTRAC, as required by law, in accordance with our <a href="https://billie.loans/privacy-policy.html">Privacy Policy</a>.</li>
+                </ol>
+            </li>
+            
+            <li>
+                <strong>GENERAL PROVISIONS</strong>
+                <ol class="sub-terms-list">
+                    <li class="page-break-avoid">This Agreement is governed by and construed in accordance with the laws of the State of Victoria, and you agree to submit to the non-exclusive jurisdiction of the courts of Victoria.</li>
+                    <li class="page-break-avoid">If we do not exercise a right or remedy fully or at a given time, we may still exercise it later at our sole discretion.</li>
+                    <li class="page-break-avoid">We may assign, novate, or transfer our rights or obligations under this Agreement to a third party without your consent if we reasonably consider it necessary for our legitimate business interests and not detrimental to you. We will notify you of any such assignment, novation, or transfer as soon as practicable, as per Clause 9.1.</li>
+                    <li class="page-break-avoid">If any provision of this Agreement is found to be invalid, unenforceable, or in breach of any mandatory law or regulation, it will be treated as deleted, and the remaining provisions will remain in full force and effect.</li>
+                    <li class="page-break-avoid">This Agreement, including these Terms, the Pay Advance Repayment Schedule, and the Website Terms (available at billie.loans), constitutes the entire agreement between you and us with respect to the Pay Advance and supersedes all prior negotiations, understandings, and agreements, whether written or oral, relating to the Pay Advance.</li>
+                    <li class="page-break-avoid">We will not be liable for any delay or failure to perform our obligations under this Agreement if such delay or failure is caused by events beyond our reasonable control, including but not limited to natural disasters, government actions, or disruptions to electronic systems. We will notify you of any such event as soon as practicable, as per Clause 9.1, and take reasonable steps to resume performance.</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    
+    <!-- Agreement Acceptance -->
+    <div style="margin-top: 20px; padding: 12px; border: 2px solid #000;">
+        <h3 style="margin-top: 0; margin-bottom: 8px;">Agreement Acceptance</h3>
+        <p style="margin: 6px 0;">
+            By signing below, I acknowledge that I have read, understood, and agree to be bound by the terms and conditions 
+            of this Pay Advance Agreement. I confirm that all information provided is true and accurate.
+        </p>
+        
+    </div>
+    
+    <!-- PDF Footer (PDF only) -->
+    <div class="pdf-footer pdf-only">
+        <div class="company-name">Billie Pty Ltd</div>
+        <div>ACN 123456789 | Melbourne, Victoria 3000</div>
+        <div>www.billie.loans | support@billie.loans</div>
+    </div>
+</body>
+</html> 

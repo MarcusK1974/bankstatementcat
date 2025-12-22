@@ -1,0 +1,10 @@
+# Locked BASIQ group taxonomy (starter subset).
+# Add the full list once extracted/confirmed. Do not invent new codes in code paths.
+
+groups:
+  - code: "EXP-007"
+    name: "Department Stores"
+  - code: "EXP-041"
+    name: "Vehicle and Transport"
+  - code: "UNKNOWN"
+    name: "Unknown / abstain"

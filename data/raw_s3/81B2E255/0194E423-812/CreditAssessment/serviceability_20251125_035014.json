@@ -1,0 +1,75 @@
+{
+  "application_number": "0194E423-812",
+  "monthly_metrics": {
+    "non_discretionary_codes": [
+      "EXP-011",
+      "EXP-016",
+      "EXP-018",
+      "EXP-021",
+      "EXP-030",
+      "EXP-036",
+      "EXP-040"
+    ],
+    "income_codes": [
+      "INC-001",
+      "INC-002",
+      "INC-003",
+      "INC-004",
+      "INC-005",
+      "INC-006",
+      "INC-007",
+      "INC-008",
+      "INC-009",
+      "INC-010",
+      "INC-012",
+      "INC-013",
+      "INC-014",
+      "INC-015",
+      "INC-016",
+      "INC-018",
+      "INC-019",
+      "INC-020",
+      "INC-021"
+    ],
+    "avg_daily_loan_repayment": 17.5,
+    "days_loan_term": 30.0,
+    "cash_savings": 13845.169999999998
+  },
+  "rule_results": [
+    {
+      "rule_id": "SERVICEABILITY_RULE_001",
+      "description": "Net income surplus over loan term plus cash savings must be non-negative",
+      "result": "pass",
+      "data_value": 22414.67,
+      "condition": ">= 0",
+      "hard_rule": true,
+      "details": {
+        "avg_daily_income": 395.29,
+        "avg_daily_expenses": 92.14,
+        "avg_daily_loan_repayment": 17.5,
+        "days_loan_term": 30.0,
+        "cash_savings": 13845.17
+      }
+    }
+  ],
+  "rules_configuration": [
+    {
+      "id": "SERVICEABILITY_RULE_001",
+      "type": "net_income_surplus",
+      "description": "Net income surplus over loan term plus cash savings must be non-negative",
+      "condition": {
+        "operator": ">=",
+        "value": 0
+      },
+      "income_months": 6,
+      "expenses_months": 6,
+      "hard_rule": true
+    }
+  ],
+  "decision": "APPROVED",
+  "assessment_date": "2025-11-25T03:50:14.876281",
+  "files_processed": [
+    "s3://billie-applications-nonprod/demo/81B2E255/0194E423-812/StatementCapture/retrieve-accounts_0ade1439-0037-41b1-a06f-37552e28e66f_e8063e48.json",
+    "s3://billie-applications-nonprod/demo/81B2E255/0194E423-812/AffordabilityReports/a2a93d17-ac0d-4f03-b940-01db8ed7f02e.json"
+  ]
+}
