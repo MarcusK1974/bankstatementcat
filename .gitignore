@@ -2,6 +2,11 @@
 /data/raw_s3/
 /data/datasets/
 /data/reports/
+/data/cache/
+/data/output/
+
+# Models (too large for GitHub)
+/models/
 
 # Python cache
 __pycache__/
@@ -12,3 +17,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Temporary files
+~$*

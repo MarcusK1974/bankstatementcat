@@ -1,0 +1,23 @@
+# ML Training Dependencies for BERT Transaction Categorizer
+# PyTorch with MPS support for Apple Silicon
+
+# Core ML frameworks
+torch>=2.0.0
+transformers>=4.35.0
+datasets>=2.14.0
+
+# Training utilities
+accelerate>=0.24.0
+scikit-learn>=1.3.0
+
+# Visualization and monitoring
+tensorboard>=2.15.0
+tqdm>=4.66.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# YAML support (already used in project)
+pyyaml>=6.0.1
+

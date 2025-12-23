@@ -1,17 +1,18 @@
 {
   "artifact_counts": {
-    "AffordabilityReports": 35,
-    "CreditAssessment": 156,
-    "LoanAgreement": 33,
-    "StatementCapture/retrieve-accounts": 35,
-    "StatementCapture/retrieve-transactions": 60,
-    "StatementCapture/verify-credentials": 35,
+    ".DS_Store": 1,
+    "AffordabilityReports": 40,
+    "CreditAssessment": 167,
+    "LoanAgreement": 35,
+    "StatementCapture/retrieve-accounts": 40,
+    "StatementCapture/retrieve-transactions": 69,
+    "StatementCapture/verify-credentials": 40,
     "statements": 2
   },
-  "generated_at_utc": "2025-12-22T06:33:39.319068+00:00",
-  "persona_available": 35,
-  "run_count": 36,
+  "generated_at_utc": "2025-12-23T03:22:11.925233+00:00",
+  "persona_available": 40,
+  "run_count": 41,
   "runs_missing_transactions": 1,
-  "runs_with_affordability": 35,
-  "runs_with_transactions": 35
+  "runs_with_affordability": 40,
+  "runs_with_transactions": 40
 }

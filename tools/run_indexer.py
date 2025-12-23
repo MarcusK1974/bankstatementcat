@@ -172,9 +172,14 @@ def build_index(root: Path) -> Tuple[List[dict], List[dict]]:
         for category in sorted(run["paths"].keys()):
             run["paths"][category] = sorted(run["paths"][category])
 
+        # Try to extract persona from verify-credentials files
         if run["verify_files"] and run["persona"] is None:
-            persona_path = root / run["verify_files"][0]
-            run["persona"] = _load_persona(persona_path)
+            for verify_file in run["verify_files"]:
+                persona_path = root / verify_file
+                persona = _load_persona(persona_path)
+                if persona:
+                    run["persona"] = persona
+                    break
         runs_list.append(run)
 
     file_inventory.sort(key=lambda row: (row["run_id"], row["artifact_type"], row["relative_path"]))

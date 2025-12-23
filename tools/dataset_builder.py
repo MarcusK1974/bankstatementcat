@@ -55,13 +55,23 @@ def _build_key(description: Optional[str], amount: Optional[Decimal], date: Opti
     return (desc, _format_amount(amount), date_key)
 
 
-def _load_groups(path: Path) -> Tuple[List[GroupInfo], List[str]]:
+def _load_groups(path: Path) -> Tuple[List[GroupInfo], List[str], Dict[str, str]]:
     try:
         import yaml  # type: ignore
 
         with path.open() as f:
             data = yaml.safe_load(f)
         groups_raw = data.get("groups", []) if isinstance(data, dict) else []
+        uncategorised: Dict[str, str] = {}
+        if isinstance(data, dict):
+            uncategorised_raw = data.get("uncategorised") or data.get("uncategorized") or {}
+            if isinstance(uncategorised_raw, dict):
+                expense = uncategorised_raw.get("expense")
+                income = uncategorised_raw.get("income")
+                if expense:
+                    uncategorised["expense"] = str(expense)
+                if income:
+                    uncategorised["income"] = str(income)
         groups: List[GroupInfo] = []
         codes: List[str] = []
         for item in groups_raw:
@@ -73,7 +83,7 @@ def _load_groups(path: Path) -> Tuple[List[GroupInfo], List[str]]:
             name = item.get("name", "")
             groups.append(GroupInfo(code=str(code), name=str(name)))
             codes.append(str(code))
-        return groups, codes
+        return groups, codes, uncategorised
     except ImportError:
         groups = []
         codes = []
@@ -84,10 +94,14 @@ def _load_groups(path: Path) -> Tuple[List[GroupInfo], List[str]]:
                 if code:
                     groups.append(GroupInfo(code=code))
                     codes.append(code)
-        return groups, codes
+        return groups, codes, {}
 
 
-def _resolve_uncategorised(groups: List[GroupInfo], codes: List[str]) -> Tuple[str, str, bool]:
+def _resolve_uncategorised(
+    groups: List[GroupInfo],
+    codes: List[str],
+    overrides: Optional[Dict[str, str]] = None,
+) -> Tuple[str, str, bool]:
     expense_candidates: List[str] = []
     income_candidates: List[str] = []
 
@@ -103,6 +117,14 @@ def _resolve_uncategorised(groups: List[GroupInfo], codes: List[str]) -> Tuple[s
 
     expense = sorted(set(expense_candidates))[0] if expense_candidates else None
     income = sorted(set(income_candidates))[0] if income_candidates else None
+
+    overrides = overrides or {}
+    expense_override = overrides.get("expense")
+    income_override = overrides.get("income")
+    if expense_override:
+        expense = expense_override
+    if income_override:
+        income = income_override
 
     fallback_used = False
     if (not expense or not income) and "UNKNOWN" in codes:
@@ -136,6 +158,7 @@ def _load_runs(index_path: Path) -> List[dict]:
 
 
 def _assign_split(run_id: str) -> str:
+    """Legacy run-based split (for backwards compatibility)."""
     digest = hashlib.sha256(run_id.encode("utf-8")).digest()
     value = int.from_bytes(digest[:8], "big") / 2**64
     if value < 0.7:
@@ -143,6 +166,20 @@ def _assign_split(run_id: str) -> str:
     if value < 0.85:
         return "val"
     return "test"
+
+
+def _assign_persona_split(persona: Optional[str], persona_analysis: dict) -> str:
+    """Persona-based split strategy to prevent data leakage."""
+    # Use recommendations from persona analysis
+    recommended = persona_analysis.get("recommended_split", {})
+    
+    if persona in recommended.get("test_personas", []):
+        return "test"
+    elif persona in recommended.get("train_personas", []):
+        return "train"
+    else:
+        # Unknown personas go to val for review
+        return "val"
 
 
 def _extract_transactions(path: Path) -> List[dict]:
@@ -274,15 +311,27 @@ def build_dataset(
     reports_dir: Path,
     raw_root: Path,
 ) -> None:
-    groups, codes = _load_groups(groups_path)
+    groups, codes, uncategorised = _load_groups(groups_path)
     whitelist = set(codes)
     if not whitelist:
         raise ValueError("No group codes found in docs/basiq_groups.yaml")
 
-    expense_uncat, income_uncat, fallback_used = _resolve_uncategorised(groups, codes)
+    expense_uncat, income_uncat, fallback_used = _resolve_uncategorised(
+        groups, codes, uncategorised
+    )
 
     runs = _load_runs(index_path)
     runs_sorted = sorted(runs, key=lambda r: r.get("run_id", ""))
+    
+    # Load persona analysis for split recommendations
+    persona_analysis_path = reports_dir / "persona_analysis.json"
+    persona_analysis = {}
+    if persona_analysis_path.exists():
+        with persona_analysis_path.open() as f:
+            persona_analysis = json.load(f)
+    else:
+        print(f"Warning: No persona analysis found at {persona_analysis_path}")
+        print("Using default split strategy")
 
     out_dir.mkdir(parents=True, exist_ok=True)
     reports_dir.mkdir(parents=True, exist_ok=True)
@@ -294,6 +343,9 @@ def build_dataset(
         "labeled_by_key": 0,
         "uncategorised": 0,
         "missing_affordability": 0,
+        "rule_transfer": 0,
+        "rule_interest": 0,
+        "rule_online_retail": 0,
         "conflicts": {"id": 0, "key": 0},
         "fallback_unknown_used": fallback_used,
         "per_run": [],
@@ -319,6 +371,9 @@ def build_dataset(
             "labeled_by_key": 0,
             "uncategorised": 0,
             "missing_affordability": 0,
+            "rule_transfer": 0,
+            "rule_interest": 0,
+            "rule_online_retail": 0,
             "conflicts": {"id": 0, "key": 0},
         }
 
@@ -351,6 +406,14 @@ def build_dataset(
                 merchant_name, clean_description, anzsic_code, anzsic_title = _extract_enrich_fields(
                     tx.get("enrich")
                 )
+                
+                # Extract subClass fields (available even when enrich is null)
+                subclass = tx.get("subClass") or {}
+                subclass_code = ""
+                subclass_title = ""
+                if isinstance(subclass, dict):
+                    subclass_code = str(subclass.get("code") or "")
+                    subclass_title = str(subclass.get("title") or "")
 
                 record = {
                     "run_id": run_id,
@@ -360,6 +423,8 @@ def build_dataset(
                     "description": description,
                     "clean_description": clean_description,
                     "merchant_name": merchant_name,
+                    "subclass_code": subclass_code,
+                    "subclass_title": subclass_title,
                     "anzsic_group_code": anzsic_code,
                     "anzsic_group_title": anzsic_title,
                     "post_date": post_date,
@@ -405,6 +470,8 @@ def build_dataset(
             label_code = ""
             label_source = ""
             affordability_path = ""
+            desc_lower = _normalize_desc(record["description"])
+            amount_dec = _safe_decimal(record["amount"])
 
             if tx_id in id_map:
                 label_code = id_map[tx_id]["code"]
@@ -414,7 +481,7 @@ def build_dataset(
             else:
                 key = _build_key(
                     record["description"],
-                    _safe_decimal(record["amount"]),
+                    amount_dec,
                     record["transaction_date"] or record["post_date"],
                 )
                 if key and key in key_map and len(transactions_by_key.get(key, [])) == 1:
@@ -423,14 +490,38 @@ def build_dataset(
                     label_source = "affordability_report_key"
                     run_counts["labeled_by_key"] += 1
                 else:
-                    if not affordability_files:
-                        run_counts["missing_affordability"] += 1
-                    if record["direction"] == "credit":
-                        label_code = income_uncat
+                    conflict_id = tx_id in conflicts.get("id", set())
+                    conflict_key = False
+                    if key:
+                        conflict_key = "|".join(key) in conflicts.get("key", set())
+                    if (conflict_id or conflict_key) and ".com" in desc_lower:
+                        label_code = "EXP-024"
+                        label_source = "rule_online_retail"
+                        run_counts.setdefault("rule_online_retail", 0)
+                        run_counts["rule_online_retail"] += 1
+                    elif "transfer" in desc_lower:
+                        label_code = "EXP-013"
+                        label_source = "rule_transfer"
+                        run_counts.setdefault("rule_transfer", 0)
+                        run_counts["rule_transfer"] += 1
+                    elif "interest" in desc_lower and amount_dec is not None:
+                        if amount_dec < 0:
+                            label_code = "EXP-006"
+                            label_source = "rule_interest_debit"
+                        else:
+                            label_code = "INC-004"
+                            label_source = "rule_interest_credit"
+                        run_counts.setdefault("rule_interest", 0)
+                        run_counts["rule_interest"] += 1
                     else:
-                        label_code = expense_uncat
-                    label_source = "fallback_uncategorised"
-                    run_counts["uncategorised"] += 1
+                        if not affordability_files:
+                            run_counts["missing_affordability"] += 1
+                        if record["direction"] == "credit":
+                            label_code = income_uncat
+                        else:
+                            label_code = expense_uncat
+                        label_source = "fallback_uncategorised"
+                        run_counts["uncategorised"] += 1
 
             if label_code not in whitelist:
                 raise ValueError(f"Label code not in whitelist: {label_code}")
@@ -450,6 +541,9 @@ def build_dataset(
         coverage["labeled_by_key"] += run_counts["labeled_by_key"]
         coverage["uncategorised"] += run_counts["uncategorised"]
         coverage["missing_affordability"] += run_counts["missing_affordability"]
+        coverage["rule_transfer"] += run_counts["rule_transfer"]
+        coverage["rule_interest"] += run_counts["rule_interest"]
+        coverage["rule_online_retail"] += run_counts["rule_online_retail"]
         coverage["conflicts"]["id"] += run_counts["conflicts"]["id"]
         coverage["conflicts"]["key"] += run_counts["conflicts"]["key"]
         coverage["per_run"].append(run_counts)
@@ -485,6 +579,8 @@ def build_dataset(
         "description",
         "clean_description",
         "merchant_name",
+        "subclass_code",
+        "subclass_title",
         "anzsic_group_code",
         "anzsic_group_title",
         "post_date",
@@ -500,16 +596,31 @@ def build_dataset(
         for row in tx_rows:
             writer.writerow(row)
 
+    # Build persona-aware splits
     splits = {"train": [], "val": [], "test": []}
+    persona_to_runs: Dict[Optional[str], List[str]] = defaultdict(list)
+    
     for run in runs_sorted:
         run_id = run.get("run_id")
+        persona = run.get("persona")
         if not run_id:
             continue
-        split = _assign_split(run_id)
-        splits[split].append(run_id)
-
+        persona_to_runs[persona].append(run_id)
+    
+    # Assign splits by persona (prevent leakage)
+    for persona, run_ids in persona_to_runs.items():
+        split = _assign_persona_split(persona, persona_analysis)
+        splits[split].extend(run_ids)
+    
     for key in splits:
         splits[key] = sorted(splits[key])
+    
+    # Get actual split strategy description
+    split_strategy = "persona-based"
+    if persona_analysis:
+        test_personas = persona_analysis.get("recommended_split", {}).get("test_personas", [])
+        train_personas = persona_analysis.get("recommended_split", {}).get("train_personas", [])
+        split_strategy = f"persona-based (test: {', '.join(test_personas)}, train: {', '.join(train_personas)})"
 
     splits_path = out_dir / "run_splits.json"
     with splits_path.open("w") as f:
@@ -517,7 +628,24 @@ def build_dataset(
             {
                 "splits": splits,
                 "counts": {k: len(v) for k, v in splits.items()},
-                "strategy": "sha256(run_id) 70/15/15",
+                "strategy": split_strategy,
+                "personas": {
+                    "train": sorted(set(
+                        run.get("persona")
+                        for run in runs_sorted
+                        if run.get("run_id") in splits["train"] and run.get("persona")
+                    )),
+                    "val": sorted(set(
+                        run.get("persona")
+                        for run in runs_sorted
+                        if run.get("run_id") in splits["val"] and run.get("persona")
+                    )),
+                    "test": sorted(set(
+                        run.get("persona")
+                        for run in runs_sorted
+                        if run.get("run_id") in splits["test"] and run.get("persona")
+                    )),
+                },
             },
             f,
             indent=2,
