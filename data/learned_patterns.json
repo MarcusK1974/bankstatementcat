@@ -1,0 +1,2904 @@
+{
+  "patterns": {
+    "cyber yee": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:24.253350",
+      "usage_count": 24,
+      "last_used": "2025-12-23T19:27:23.887694",
+      "example_descriptions": [
+        "CYBER YEE PTY LTD BURWOOD"
+      ]
+    },
+    "trainingdaygym trai46416": {
+      "category": "EXP-017",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:27.682278",
+      "usage_count": 39,
+      "last_used": "2025-12-23T19:27:23.455387",
+      "example_descriptions": [
+        "TrainingDayGym TRAI46416"
+      ]
+    },
+    "martol": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:30.180554",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.725534",
+      "example_descriptions": [
+        "MARTOL PTY LTD MELBOURNE"
+      ]
+    },
+    "amazon reta": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:33.590501",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.772824",
+      "example_descriptions": [
+        "AMAZON RETA* AMAZON AU +61866216107"
+      ]
+    },
+    "zlr waverley": {
+      "category": "EXP-017",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:35.295935",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.725963",
+      "example_descriptions": [
+        "ZLR*Waverley Warriors M Oakleigh East"
+      ]
+    },
+    "readings chadstone": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:37.196399",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.726221",
+      "example_descriptions": [
+        "Readings Chadstone West Melbourn"
+      ]
+    },
+    "bunnings chadstone": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:39.558139",
+      "usage_count": 79,
+      "last_used": "2025-12-23T19:27:23.765921",
+      "example_descriptions": [
+        "BUNNINGS 768000 CHADSTONE"
+      ]
+    },
+    "zlr temperance": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:41.161255",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.726693",
+      "example_descriptions": [
+        "ZLR*Temperance Society Hughesdale"
+      ]
+    },
+    "amazon marketplace": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:42.122776",
+      "usage_count": 129,
+      "last_used": "2025-12-23T19:27:24.025479",
+      "example_descriptions": [
+        "AMAZON MARKETPLACE AU SYDNEY"
+      ]
+    },
+    "crust ashburton": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:43.573911",
+      "usage_count": 19,
+      "last_used": "2025-12-23T19:27:23.957644",
+      "example_descriptions": [
+        "CRUST - ASHBURTON ROBINA"
+      ]
+    },
+    "bunnings notting": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:48.992426",
+      "usage_count": 29,
+      "last_used": "2025-12-23T19:27:23.664700",
+      "example_descriptions": [
+        "BUNNINGS NOTTING HL 6359 NOTTING HILL"
+      ]
+    },
+    "bunnings group": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:50.090147",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.730413",
+      "example_descriptions": [
+        "BUNNINGS GROUP LTD Rivervale"
+      ]
+    },
+    "ranya youssef": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:51.540646",
+      "usage_count": 59,
+      "last_used": "2025-12-23T19:27:23.985448",
+      "example_descriptions": [
+        "RANYA YOUSSEF ASHWOOD"
+      ]
+    },
+    "crea investments": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:52.806666",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.820138",
+      "example_descriptions": [
+        "CREA INVESTMENTS P/L ASHBURTON"
+      ]
+    },
+    "snooze chadstone": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:56.931437",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.731911",
+      "example_descriptions": [
+        "SNOOZE CHADSTONE"
+      ]
+    },
+    "straight outta": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:58.666610",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.732268",
+      "example_descriptions": [
+        "Straight Outta Saigon Melbourne"
+      ]
+    },
+    "ww metro": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:29:59.681312",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:20.974772",
+      "example_descriptions": [
+        "WW METRO/222 EXHIBITION SMELBOURNE"
+      ]
+    },
+    "elearning portal": {
+      "category": "EXP-011",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:00.819593",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.733425",
+      "example_descriptions": [
+        "ELEARNING PORTAL HEALESVILLE"
+      ]
+    },
+    "myer chadstone": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:02.232264",
+      "usage_count": 34,
+      "last_used": "2025-12-23T19:27:23.846722",
+      "example_descriptions": [
+        "MYER CHADSTONE CHADSTONE"
+      ]
+    },
+    "linkt": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:03.330037",
+      "usage_count": 259,
+      "last_used": "2025-12-23T19:27:24.105785",
+      "example_descriptions": [
+        "LINKT MELBOURNE MELBOURNE"
+      ]
+    },
+    "sp who": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:04.515979",
+      "usage_count": 19,
+      "last_used": "2025-12-23T19:27:23.698251",
+      "example_descriptions": [
+        "SP WHO GIVES A CRAP MELBOURNE"
+      ]
+    },
+    "tyroola 7456": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:06.471634",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.736708",
+      "example_descriptions": [
+        "Tyroola 7456 Haymarket"
+      ]
+    },
+    "sq mista": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:07.841238",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:20.872844",
+      "example_descriptions": [
+        "SQ *MISTA X Melbourne"
+      ]
+    },
+    "endeavour cannon": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:09.042201",
+      "usage_count": 24,
+      "last_used": "2025-12-23T19:27:23.706518",
+      "example_descriptions": [
+        "ENDEAVOUR CANNON HILL"
+      ]
+    },
+    "7 eleven": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:10.674734",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.738556",
+      "example_descriptions": [
+        "7 ELEVEN 1259 CHADSTONE"
+      ]
+    },
+    "amznprimeau membership": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:12.445258",
+      "usage_count": 24,
+      "last_used": "2025-12-23T19:27:23.688282",
+      "example_descriptions": [
+        "AMZNPRIMEAU MEMBERSHIP SYDNEY SOUTH"
+      ]
+    },
+    "convent bakery": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:13.892304",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:20.763544",
+      "example_descriptions": [
+        "CONVENT BAKERY Abbotsford"
+      ]
+    },
+    "smp roll": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:14.978045",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:20.797155",
+      "example_descriptions": [
+        "SMP*Roll Mi Melbourne"
+      ]
+    },
+    "sq haiku": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:16.412657",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:23.933519",
+      "example_descriptions": [
+        "SQ *HAIKU CAFE Camberwell"
+      ]
+    },
+    "uber trip": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:17.447918",
+      "usage_count": 154,
+      "last_used": "2025-12-23T19:27:23.898601",
+      "example_descriptions": [
+        "UBER *TRIP HELP.UBER.COM Sydney"
+      ]
+    },
+    "jetstar air": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:18.508340",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.743567",
+      "example_descriptions": [
+        "JETSTAR AIR LMVKMM WWW.JETSTAR.C"
+      ]
+    },
+    "the dempsey": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:21.581690",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.744503",
+      "example_descriptions": [
+        "The Dempsey Group Pty LtdHawthorn"
+      ]
+    },
+    "haiku": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:22.922242",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.744975",
+      "example_descriptions": [
+        "HAIKU MELBOURNE"
+      ]
+    },
+    "ezi riversdale": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:24.565556",
+      "usage_count": 23,
+      "last_used": "2025-12-23T19:08:32.058465",
+      "example_descriptions": [
+        "EZI*RIVERSDALE ORTHO Hawthorn East"
+      ]
+    },
+    "aussie broadband": {
+      "category": "EXP-036",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:26.021557",
+      "usage_count": 29,
+      "last_used": "2025-12-23T19:27:23.948821",
+      "example_descriptions": [
+        "AUSSIE BROADBAND LIMITED MORWELL"
+      ]
+    },
+    "l y": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:27.131357",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.751016",
+      "example_descriptions": [
+        "L&Y PROSPERITY PTY LTD CHADSTONE"
+      ]
+    },
+    "abbeys auctions": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:28.331750",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.751763",
+      "example_descriptions": [
+        "Abbeys Auctions Burwood"
+      ]
+    },
+    "fresh bazaar": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:29.559390",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.806394",
+      "example_descriptions": [
+        "FRESH BAZAAR ASHBURT ASHBURTON"
+      ]
+    },
+    "exhibition pharmacy": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:30.658691",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.753999",
+      "example_descriptions": [
+        "EXHIBITION PHARMACY MELBOURNE"
+      ]
+    },
+    "sq bobbys": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:32.723840",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:23.933737",
+      "example_descriptions": [
+        "SQ *BOBBYS COFFEE Melbourne"
+      ]
+    },
+    "primevideo": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:33.974577",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.758202",
+      "example_descriptions": [
+        "PRIMEVIDEO SYDNEY"
+      ]
+    },
+    "sq wagyu": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:35.433445",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.764359",
+      "example_descriptions": [
+        "SQ *WAGYU FUN CHADSTONE 1800595310"
+      ]
+    },
+    "kmart 1147": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:36.659290",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.760533",
+      "example_descriptions": [
+        "KMART 1147 CHADSTONE"
+      ]
+    },
+    "gfm gofundme": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:37.792440",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.762129",
+      "example_descriptions": [
+        "GFM*GoFundMe Help Owen s GOFUNDME.COM"
+      ]
+    },
+    "dan murphys": {
+      "category": "EXP-051",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:38.879956",
+      "usage_count": 8,
+      "last_used": "2025-12-23T19:07:42.173464",
+      "example_descriptions": [
+        "DAN MURPHYS ONLINE BELLA VISTA"
+      ]
+    },
+    "dr wendy": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:40.627097",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.802414",
+      "example_descriptions": [
+        "Dr Wendy Marshman Malvern"
+      ]
+    },
+    "tyroola 8140": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:41.999354",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.766607",
+      "example_descriptions": [
+        "Tyroola 8140 Haymarket"
+      ]
+    },
+    "sp jurlique": {
+      "category": "EXP-027",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:43.344044",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.766992",
+      "example_descriptions": [
+        "SP JURLIQUE AU ADELAIDE"
+      ]
+    },
+    "sargon cafe": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:44.468157",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.768116",
+      "example_descriptions": [
+        "Sargon Cafe Melbourne"
+      ]
+    },
+    "burwood laserwash": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:45.486270",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.768889",
+      "example_descriptions": [
+        "BURWOOD LASERWASH CENT BURWOOD"
+      ]
+    },
+    "1410 opsm": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:46.692698",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.771929",
+      "example_descriptions": [
+        "1410 OPSM CHADSTONE"
+      ]
+    },
+    "sp forbes": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:48.030865",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.771051",
+      "example_descriptions": [
+        "SP FORBES FOOTWEAR HORNSBY"
+      ]
+    },
+    "dr susan": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:49.124365",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.832924",
+      "example_descriptions": [
+        "DR SUSAN MORRIS KEW"
+      ]
+    },
+    "snowys outdoors": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:50.496014",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.774291",
+      "example_descriptions": [
+        "SNOWYS OUTDOORS TORRENSVILLE"
+      ]
+    },
+    "smp bakers": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:52.041116",
+      "usage_count": 44,
+      "last_used": "2025-12-23T19:27:23.883281",
+      "example_descriptions": [
+        "SMP*Bakers Delight Ash Ashburton"
+      ]
+    },
+    "tickets the": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:56.681953",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.776034",
+      "example_descriptions": [
+        "TICKETS*THE BIG DE 0404900312"
+      ]
+    },
+    "sq ashgrove": {
+      "category": "EXP-052",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:57.874072",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.776910",
+      "example_descriptions": [
+        "SQ *ASHGROVE CALISTHENICSAshburton"
+      ]
+    },
+    "smp skyhigh": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:30:59.653571",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.781097",
+      "example_descriptions": [
+        "SMP*Skyhigh Mt Danden9e Mount Dandeno"
+      ]
+    },
+    "liquorland 2764": {
+      "category": "EXP-051",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:01.508546",
+      "usage_count": 2,
+      "last_used": "2025-12-23T19:07:42.171631",
+      "example_descriptions": [
+        "LIQUORLAND 2764 ASHBURTON"
+      ]
+    },
+    "the irish": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:06.350054",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.780029",
+      "example_descriptions": [
+        "THE IRISH TIMES PUB MELBOURNE"
+      ]
+    },
+    "museums board": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:07.628689",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.780561",
+      "example_descriptions": [
+        "MUSEUMS BOARD OF VIC CARLTON"
+      ]
+    },
+    "sq eclectic": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:09.476926",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.781615",
+      "example_descriptions": [
+        "SQ *ECLECTIC CORNER Olinda"
+      ]
+    },
+    "sq wonder": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:10.784172",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.782210",
+      "example_descriptions": [
+        "SQ *WONDER PIES Southbank"
+      ]
+    },
+    "sq uncle": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:13.127405",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.782708",
+      "example_descriptions": [
+        "SQ *UNCLE JOHN'S LICORICESouthbank"
+      ]
+    },
+    "sq moondarra": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:14.341490",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.783188",
+      "example_descriptions": [
+        "SQ *MOONDARRA CHEESE PTY Dandenong Sou"
+      ]
+    },
+    "ar trading": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:15.431259",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.783682",
+      "example_descriptions": [
+        "AR TRADING PTY LTD ASHBURTON"
+      ]
+    },
+    "museum admiss": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:16.629255",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.784822",
+      "example_descriptions": [
+        "MUSEUM VICTORIA ADMISS CARLTON"
+      ]
+    },
+    "clinique australia": {
+      "category": "EXP-027",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:18.858522",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.785440",
+      "example_descriptions": [
+        "Clinique Australia Erskineville"
+      ]
+    },
+    "barista cafe": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:19.992018",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.837079",
+      "example_descriptions": [
+        "Barista Cafe Sydenham"
+      ]
+    },
+    "laser clinics": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:21.065458",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:23.934508",
+      "example_descriptions": [
+        "Laser Clinics Malvern CenST LEONARDS"
+      ]
+    },
+    "halalicious thai": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:22.313705",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:23.777347",
+      "example_descriptions": [
+        "HALALICIOUS THAI Ashwood"
+      ]
+    },
+    "fairfax subscriptions": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:23.818563",
+      "usage_count": 29,
+      "last_used": "2025-12-23T19:27:24.085657",
+      "example_descriptions": [
+        "FAIRFAX SUBSCRIPTIONS PYRMONT"
+      ]
+    },
+    "dodee paidang": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:25.819383",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.793376",
+      "example_descriptions": [
+        "DODEE PAIDANG SWANSTON MELBOURNE"
+      ]
+    },
+    "sp towards": {
+      "category": "EXP-027",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:27.444442",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.794674",
+      "example_descriptions": [
+        "SP TOWARDS CALM TOWARDSCALM.CDE"
+      ]
+    },
+    "nab intnl": {
+      "category": "EXP-025",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:29.121822",
+      "usage_count": 154,
+      "last_used": "2025-12-23T19:27:25.564077",
+      "example_descriptions": [
+        "NAB INTNL TRAN FEE - (MC)"
+      ]
+    },
+    "taste dumpling": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:30.507059",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.797135",
+      "example_descriptions": [
+        "TASTE DUMPLING BURWOOD"
+      ]
+    },
+    "chemist warehouse": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:31.649344",
+      "usage_count": 23,
+      "last_used": "2025-12-23T19:08:30.535227",
+      "example_descriptions": [
+        "CHEMIST WAREHOUSE ADELAIDE"
+      ]
+    },
+    "sq mister": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:35.842601",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.921368",
+      "example_descriptions": [
+        "SQ *MISTER + MISS Mont Albert"
+      ]
+    },
+    "foot locker": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:37.711964",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.799166",
+      "example_descriptions": [
+        "Foot Locker Australia IncMurarrie"
+      ]
+    },
+    "budget pet": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:39.341103",
+      "usage_count": 44,
+      "last_used": "2025-12-23T19:27:23.775443",
+      "example_descriptions": [
+        "BUDGET PET PRODUCTS MOLENDINAR"
+      ]
+    },
+    "bunnings edwardstown": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:40.534421",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.800318",
+      "example_descriptions": [
+        "BUNNINGS 557000 EDWARDSTOWN"
+      ]
+    },
+    "hong meng": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:41.764021",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.801516",
+      "example_descriptions": [
+        "HONG MENG PTY LTD ASHBURTON"
+      ]
+    },
+    "gulzig p": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:43.707952",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.803212",
+      "example_descriptions": [
+        "Gulzig P/L Malvern"
+      ]
+    },
+    "yourtown milton": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:44.730098",
+      "usage_count": 24,
+      "last_used": "2025-12-23T19:27:24.105757",
+      "example_descriptions": [
+        "YOURTOWN MILTON"
+      ]
+    },
+    "thefkc com": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:45.857597",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.805760",
+      "example_descriptions": [
+        "THEFKC.COM.AU MITCHAM"
+      ]
+    },
+    "southpaws malvern": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:48.106375",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.807080",
+      "example_descriptions": [
+        "SouthPaws Malvern Malvern East"
+      ]
+    },
+    "campion education": {
+      "category": "EXP-011",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:49.248375",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.809504",
+      "example_descriptions": [
+        "CAMPION EDUCATION NUNAWADING"
+      ]
+    },
+    "sp mizuno": {
+      "category": "EXP-055",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:50.868291",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.810700",
+      "example_descriptions": [
+        "SP MIZUNO MULGRAVE"
+      ]
+    },
+    "stayz ha6q7wf9": {
+      "category": "INC-007",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:52.040638",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.865723",
+      "example_descriptions": [
+        "STAYZ HA6Q7WF9 61 290567003"
+      ]
+    },
+    "sq axil": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:52.991456",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:25.323239",
+      "example_descriptions": [
+        "SQ *AXIL COFFEE RICHMOND Cremorne"
+      ]
+    },
+    "paystay south": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:54.078353",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.813813",
+      "example_descriptions": [
+        "PAYSTAY SOUTH WHARF"
+      ]
+    },
+    "knox private": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:55.010763",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.815777",
+      "example_descriptions": [
+        "KNOX PRIVATE HOSPITA WANTIRNA"
+      ]
+    },
+    "opark parking": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:56.126130",
+      "usage_count": 119,
+      "last_used": "2025-12-23T19:27:23.793920",
+      "example_descriptions": [
+        "OPARK PARKING APP LA PEROUSE"
+      ]
+    },
+    "le vietnamese": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:57.141903",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.818751",
+      "example_descriptions": [
+        "Le Vietnamese st fd Melbourne"
+      ]
+    },
+    "ayda": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:58.350110",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.819433",
+      "example_descriptions": [
+        "AYDA PTY LTD MELBOURNE"
+      ]
+    },
+    "mellow beans": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:31:59.413188",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.820808",
+      "example_descriptions": [
+        "Mellow Beans Melbourne"
+      ]
+    },
+    "bakers delight": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:00.699168",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:23.522189",
+      "example_descriptions": [
+        "Bakers Delight Canterbury"
+      ]
+    },
+    "ymca cp": {
+      "category": "EXP-052",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:08.460808",
+      "usage_count": 49,
+      "last_used": "2025-12-23T19:27:23.785539",
+      "example_descriptions": [
+        "YMCA CP ASHBURTON ASHBURTON"
+      ]
+    },
+    "cwh chadstone": {
+      "category": "EXP-019",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:10.128003",
+      "usage_count": 8,
+      "last_used": "2025-12-23T19:27:20.828380",
+      "example_descriptions": [
+        "CWH CHADSTONE HOMEMAKER CCHADSTONE"
+      ]
+    },
+    "sia burwood": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:11.508611",
+      "usage_count": 24,
+      "last_used": "2025-12-23T19:27:23.453755",
+      "example_descriptions": [
+        "SIA BURWOOD PTY LTD BURWOOD"
+      ]
+    },
+    "nbcf org": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:12.675997",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.837850",
+      "example_descriptions": [
+        "NBCF.ORG.AU SYDNEY"
+      ]
+    },
+    "market blooms": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:15.252868",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.844404",
+      "example_descriptions": [
+        "MARKET BLOOMS PTY LTD CAMBERWELL"
+      ]
+    },
+    "whs melt4": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:17.511199",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.845182",
+      "example_descriptions": [
+        "WHS MELT4 AIRSIDE S3 TULLAMARINE"
+      ]
+    },
+    "sq 303": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:19.376468",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.846788",
+      "example_descriptions": [
+        "SQ *303 northcote"
+      ]
+    },
+    "kmart 1350": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:20.725431",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.848459",
+      "example_descriptions": [
+        "KMART 1350 CAMBERWELL"
+      ]
+    },
+    "grilld waverley": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:22.328949",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.851481",
+      "example_descriptions": [
+        "GRILLD WAVERLEY RD CHA CHADSTONE"
+      ]
+    },
+    "ellen ma": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:23.779030",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.855652",
+      "example_descriptions": [
+        "ELLEN MA MONT ALBERT N"
+      ]
+    },
+    "jb hi": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:25.886931",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.864680",
+      "example_descriptions": [
+        "JB HI FI CHADSTONE"
+      ]
+    },
+    "heng ning": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:27.143466",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.866568",
+      "example_descriptions": [
+        "HENG & NING PTY LTD MALVERN EAST"
+      ]
+    },
+    "ashwood bakery": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:28.365961",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.972055",
+      "example_descriptions": [
+        "ASHWOOD BAKERY ASHWOOD"
+      ]
+    },
+    "izakaya chouchou": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:29.713543",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.870672",
+      "example_descriptions": [
+        "IZAKAYA CHOUCHOU GLEN IRIS"
+      ]
+    },
+    "kmart 1001": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:31.092303",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:24.093061",
+      "example_descriptions": [
+        "KMART 1001 BURWOOD EAST"
+      ]
+    },
+    "porgies cafe": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:34.096514",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.882889",
+      "example_descriptions": [
+        "PORGIES CAFE HAWTHORN"
+      ]
+    },
+    "amazon au": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:35.093201",
+      "usage_count": 19,
+      "last_used": "2025-12-23T19:27:23.414593",
+      "example_descriptions": [
+        "AMAZON AU SYDNEY SOUTH"
+      ]
+    },
+    "monacos deli": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:36.291480",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.885696",
+      "example_descriptions": [
+        "MONACOS DELI CAMBERWELL"
+      ]
+    },
+    "vicroads online": {
+      "category": "EXP-015",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:39.043505",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:26.533782",
+      "example_descriptions": [
+        "VICROADS ONLINE PAYMEN KEW"
+      ]
+    },
+    "sq rotary": {
+      "category": "EXP-052",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:40.601257",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.890437",
+      "example_descriptions": [
+        "SQ *ROTARY CLUB OF CHADSTAshburton"
+      ]
+    },
+    "zlr l": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:42.209588",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:26.533953",
+      "example_descriptions": [
+        "ZLR*L'Hotel Gitan Prahran"
+      ]
+    },
+    "pepes italian": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:44.508649",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.898804",
+      "example_descriptions": [
+        "PEPES ITALIAN & LIQUOR MELBOURNE"
+      ]
+    },
+    "amzn mktp": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:45.700758",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.899763",
+      "example_descriptions": [
+        "AMZN Mktp FR*WL3FN1OC5 800-854-7888"
+      ]
+    },
+    "dr katie": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:46.798283",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:20.940936",
+      "example_descriptions": [
+        "Dr Katie Heathershaw Surrey Hills"
+      ]
+    },
+    "the cobblers": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:48.691977",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.910695",
+      "example_descriptions": [
+        "THE COBBLERS LAST PTY. MELBOURNE"
+      ]
+    },
+    "sq haigh": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:50.729708",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.911668",
+      "example_descriptions": [
+        "SQ *HAIGH'S ADELAIDE ARCAAdelaide"
+      ]
+    },
+    "tbw enterprise": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:52.626057",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.381651",
+      "example_descriptions": [
+        "TBW ENTERPRISE PTY L CAMBERWELL"
+      ]
+    },
+    "kitchen warehouse": {
+      "category": "EXP-019",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:54.646479",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:26.534333",
+      "example_descriptions": [
+        "KITCHEN WAREHOUSE CHADSTONE"
+      ]
+    },
+    "boroondara aged": {
+      "category": "EXP-018",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:55.800958",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.933627",
+      "example_descriptions": [
+        "BOROONDARA AGED SERV ASHBURTON"
+      ]
+    },
+    "t1": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:57.156982",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.501297",
+      "example_descriptions": [
+        "Melbourne T1 Melbourne"
+      ]
+    },
+    "cocacolaepp airp": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:32:58.831469",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.944047",
+      "example_descriptions": [
+        "CocaColaEPP Adelaide Airp"
+      ]
+    },
+    "peter alexander": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:00.255191",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.945073",
+      "example_descriptions": [
+        "PETER ALEXANDER MELBOURNE"
+      ]
+    },
+    "taf chadstone": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:01.624402",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.946113",
+      "example_descriptions": [
+        "TAF CHADSTONE CHADSTONE"
+      ]
+    },
+    "david jones": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:03.793762",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.948743",
+      "example_descriptions": [
+        "DAVID JONES LIMITED CHADSTONE"
+      ]
+    },
+    "lululemon chadstone": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:05.741362",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.951109",
+      "example_descriptions": [
+        "Lululemon Chadstone"
+      ]
+    },
+    "lh trading": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:07.092703",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.952342",
+      "example_descriptions": [
+        "LH Trading Brisbane"
+      ]
+    },
+    "ritchies paynesville": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:08.211933",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.954652",
+      "example_descriptions": [
+        "RITCHIES PAYNESVILLE PAYNESVILLE"
+      ]
+    },
+    "tambovalley bairnsdale": {
+      "category": "EXP-038",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:10.068543",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.958685",
+      "example_descriptions": [
+        "TAMBOVALLEY 51526126 BAIRNSDALE"
+      ]
+    },
+    "zlr paynesville": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:12.093661",
+      "usage_count": 7,
+      "last_used": "2025-12-23T19:08:26.534713",
+      "example_descriptions": [
+        "ZLR*Paynesville Hotel Paynesville"
+      ]
+    },
+    "daiso chadstone": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:14.593746",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.861750",
+      "example_descriptions": [
+        "Daiso (Chadstone SC) Chadstone"
+      ]
+    },
+    "myer pty": {
+      "category": "EXP-032",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:15.964246",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.382986",
+      "example_descriptions": [
+        "Myer Pty Ltd Docklands"
+      ]
+    },
+    "v line": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:17.135531",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.973477",
+      "example_descriptions": [
+        "V LINE CORPORATION DOCKLANDS"
+      ]
+    },
+    "name": {
+      "category": "EXP-009",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:19.172811",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.978090",
+      "example_descriptions": [
+        "#NAME?"
+      ]
+    },
+    "h r": {
+      "category": "EXP-011",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:22.162520",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:20.979480",
+      "example_descriptions": [
+        "H & R BLOCK LIMITED - CAMBERWELL"
+      ]
+    },
+    "hiclean dc": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:23.324991",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:23.730440",
+      "example_descriptions": [
+        "HICLEAN DC ASHBURTON"
+      ]
+    },
+    "greencross vets": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:25.406741",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.487287",
+      "example_descriptions": [
+        "GREENCROSS VETS ASHBURTON"
+      ]
+    },
+    "easypark prahran": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:27.713199",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.372634",
+      "example_descriptions": [
+        "EasyPark PRAHRAN"
+      ]
+    },
+    "anaconda hawthorn": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:28.901595",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.374239",
+      "example_descriptions": [
+        "ANACONDA HAWTHORN EAST HAWTHORN EAST"
+      ]
+    },
+    "grilld pty": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:30.407904",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.378627",
+      "example_descriptions": [
+        "Grilld Pty Ltd Richmond"
+      ]
+    },
+    "sq hannah": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:31.839319",
+      "usage_count": 39,
+      "last_used": "2025-12-23T19:27:23.896250",
+      "example_descriptions": [
+        "SQ *HANNAH KEBABS Ashburton"
+      ]
+    },
+    "testsprite com": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:33.125531",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.384275",
+      "example_descriptions": [
+        "TESTSPRITE.COM WWW.TESTSPRITWA"
+      ]
+    },
+    "church for": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:34.049210",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.386926",
+      "example_descriptions": [
+        "CHURCH FOR THE WHOLE F EUMEMMERRING"
+      ]
+    },
+    "ngv mship": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:37.111308",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.394121",
+      "example_descriptions": [
+        "NGV Mship-Ticketing Melbourne"
+      ]
+    },
+    "harris scarfe": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:38.914834",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.518634",
+      "example_descriptions": [
+        "HARRIS SCARFE CARNEG CARNEGIE"
+      ]
+    },
+    "zlr hoshi": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:40.083555",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.402651",
+      "example_descriptions": [
+        "ZLR*Hoshi Sushi Carnegi Carnegie"
+      ]
+    },
+    "yo yo": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:42.763315",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.404148",
+      "example_descriptions": [
+        "YO YO SUSHI CAMBERWELL"
+      ]
+    },
+    "feel good": {
+      "category": "EXP-017",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:44.117722",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.571031",
+      "example_descriptions": [
+        "FEEL GOOD PILATES ASHBURTON"
+      ]
+    },
+    "ellora events": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:45.407710",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.410231",
+      "example_descriptions": [
+        "ELLORA EVENTS MELBOURNE"
+      ]
+    },
+    "pin sia": {
+      "category": "INC-003",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:46.901475",
+      "usage_count": 7,
+      "last_used": "2025-12-23T19:08:30.534943",
+      "example_descriptions": [
+        "Pin* SIA Medical Centre BBurwood"
+      ]
+    },
+    "monash uni": {
+      "category": "EXP-011",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:47.896876",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:30.534928",
+      "example_descriptions": [
+        "MONASH UNI FEES 0780 Melbourne"
+      ]
+    },
+    "cowley business": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:50.592673",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.436813",
+      "example_descriptions": [
+        "COWLEY BUSINESS HOL BARWON HEADS"
+      ]
+    },
+    "chadstone ck": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:51.817113",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.438288",
+      "example_descriptions": [
+        "CHADSTONE CK FOOD STOR CHADSTONE"
+      ]
+    },
+    "sq ket": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:53.819401",
+      "usage_count": 8,
+      "last_used": "2025-12-23T19:27:23.439770",
+      "example_descriptions": [
+        "SQ *KET BAKER Wallington"
+      ]
+    },
+    "lovisa pty": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:57.326401",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.574752",
+      "example_descriptions": [
+        "LOVISA PTY LIMITED CHADSTONE"
+      ]
+    },
+    "shein com": {
+      "category": "EXP-032",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:33:58.357504",
+      "usage_count": 8,
+      "last_used": "2025-12-23T19:27:23.445717",
+      "example_descriptions": [
+        "SHEIN.COM SOUTH YARRA"
+      ]
+    },
+    "clear skincare": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:02.273428",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.458912",
+      "example_descriptions": [
+        "CLEAR SKINCARE SYDNEY"
+      ]
+    },
+    "toscanos hawksburn": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:03.508024",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.462153",
+      "example_descriptions": [
+        "TOSCANOS HAWKSBURN TOORAK"
+      ]
+    },
+    "castlemaine oakwd": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:04.722824",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.463782",
+      "example_descriptions": [
+        "CASTLEMAINE OAKWD SM CASTLEMAINE"
+      ]
+    },
+    "apple com": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:05.943131",
+      "usage_count": 34,
+      "last_used": "2025-12-23T19:27:23.990385",
+      "example_descriptions": [
+        "APPLE.COM/BILL SYDNEY"
+      ]
+    },
+    "sq sparkle": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:07.720752",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.475866",
+      "example_descriptions": [
+        "SQ *SPARKLE FRUIT Barwon heads"
+      ]
+    },
+    "sq icecream": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:09.207568",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.478909",
+      "example_descriptions": [
+        "SQ *ICECREAM REPUBLIC Castlemaine"
+      ]
+    },
+    "petmeds": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:11.040726",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.490931",
+      "example_descriptions": [
+        "PETMEDS 01300376337"
+      ]
+    },
+    "eb skevs": {
+      "category": "EXP-012",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:12.341970",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.496010",
+      "example_descriptions": [
+        "EB *Skevs Ap 801-413-7200"
+      ]
+    },
+    "cursor usage": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:13.461533",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.504597",
+      "example_descriptions": [
+        "CURSOR USAGE AUG CURSOR.COM NY"
+      ]
+    },
+    "wheel and": {
+      "category": "EXP-019",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:14.631742",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.506787",
+      "example_descriptions": [
+        "WHEEL AND BARROW CAMBE CAMBERWELL"
+      ]
+    },
+    "kennards hire": {
+      "category": "EXP-032",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:16.260138",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.529655",
+      "example_descriptions": [
+        "KENNARDS HIRE PTY LT CLAYTON"
+      ]
+    },
+    "sq shoe": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:17.543726",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.515223",
+      "example_descriptions": [
+        "SQ *SHOE GUY CAMBERWELL Melbourne"
+      ]
+    },
+    "wilson parking": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:18.585184",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.524012",
+      "example_descriptions": [
+        "WILSON PARKING AUSTRALIA BOX HILL"
+      ]
+    },
+    "camp quality": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:19.821830",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.537490",
+      "example_descriptions": [
+        "CAMP QUALITY LIMITED EPPING"
+      ]
+    },
+    "peter jackson": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:21.261881",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.558454",
+      "example_descriptions": [
+        "PETER JACKSON CHADSTONE"
+      ]
+    },
+    "training day": {
+      "category": "EXP-017",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:22.949137",
+      "usage_count": 34,
+      "last_used": "2025-12-23T19:27:24.105737",
+      "example_descriptions": [
+        "TRAINING DAY GYM TRAI46416"
+      ]
+    },
+    "interest on": {
+      "category": "EXP-006",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:24.543870",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:24.037904",
+      "example_descriptions": [
+        "INTEREST ON CASH ADV(S)"
+      ]
+    },
+    "the kilburn": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:25.866781",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.576534",
+      "example_descriptions": [
+        "The Kilburn Hawthorn"
+      ]
+    },
+    "uniqlo rundle": {
+      "category": "EXP-055",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:27.048326",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.580013",
+      "example_descriptions": [
+        "UNIQLO RUNDLE MALL Adelaide"
+      ]
+    },
+    "trybooking st": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:28.322829",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.781535",
+      "example_descriptions": [
+        "TRYBOOKING*ST KEVINS COLLSOUTH YARRA"
+      ]
+    },
+    "rubika cafebar": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:29.940487",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.598954",
+      "example_descriptions": [
+        "Rubika CafeBar Toorak"
+      ]
+    },
+    "ritchies hawthorn": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:31.291166",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.600971",
+      "example_descriptions": [
+        "RITCHIES HAWTHORN SQ HAWTHORN"
+      ]
+    },
+    "nicks wine": {
+      "category": "EXP-051",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:32.567177",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.602759",
+      "example_descriptions": [
+        "NICKS WINE MERCHANTS EAST DONCAST"
+      ]
+    },
+    "4me pilates": {
+      "category": "EXP-017",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:33.950609",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.604851",
+      "example_descriptions": [
+        "4ME PILATES KEILOR KEILOR DOWNS"
+      ]
+    },
+    "sp brazilian": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:35.173578",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.606771",
+      "example_descriptions": [
+        "SP BRAZILIAN TAPIOCA PEREGIAN BEAC"
+      ]
+    },
+    "apple espresso": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:36.407040",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.608536",
+      "example_descriptions": [
+        "APPLE ESPRESSO MOUNT ELIZA"
+      ]
+    },
+    "tullys corner": {
+      "category": "EXP-016",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:37.672281",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.610435",
+      "example_descriptions": [
+        "TULLYS CORNER PROD MORNINGTON"
+      ]
+    },
+    "linkedinprea": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:38.813975",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:24.103091",
+      "example_descriptions": [
+        "LinkedInPreA *46853276 16506873555"
+      ]
+    },
+    "tatts online": {
+      "category": "EXP-014",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:39.909625",
+      "usage_count": 54,
+      "last_used": "2025-12-23T19:27:25.550897",
+      "example_descriptions": [
+        "TATTS ONLINE PTY LTD 61754700000"
+      ]
+    },
+    "zlr palamara": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:41.165098",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.628708",
+      "example_descriptions": [
+        "ZLR*Palamara Village Fr Mount Eliza"
+      ]
+    },
+    "habitat pet": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:42.342402",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.630567",
+      "example_descriptions": [
+        "HABITAT PET SUPPLIES ALTONA NORTH"
+      ]
+    },
+    "sq vmm": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:44.110754",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.632449",
+      "example_descriptions": [
+        "SQ *VMM Mount Eliza"
+      ]
+    },
+    "c adv": {
+      "category": "EXP-003",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:45.457304",
+      "usage_count": 59,
+      "last_used": "2025-12-23T19:27:25.557524",
+      "example_descriptions": [
+        "C ADV FEE"
+      ]
+    },
+    "rmh home": {
+      "category": "EXP-014",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:46.691799",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.642564",
+      "example_descriptions": [
+        "RMH HOME LOTTERY MELBOURNE"
+      ]
+    },
+    "sl australia": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:48.257488",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.662679",
+      "example_descriptions": [
+        "SL Australia SV SPRINGVALE"
+      ]
+    },
+    "mks spices": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:49.931513",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.800286",
+      "example_descriptions": [
+        "MKS SPICES N THINGS ASHWOASHWOOD"
+      ]
+    },
+    "aliexpress north": {
+      "category": "INC-007",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:51.052180",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.937421",
+      "example_descriptions": [
+        "aliexpress North Sydney"
+      ]
+    },
+    "post ashburton": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:53.864997",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.680503",
+      "example_descriptions": [
+        "POST ASHBURTON POST SH ASHBURTON"
+      ]
+    },
+    "ink pod": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:56.829890",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.720193",
+      "example_descriptions": [
+        "INK-POD.COM MONG KOK"
+      ]
+    },
+    "edinburgh hotel": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:57.991410",
+      "usage_count": 15,
+      "last_used": "2025-12-23T19:08:33.529116",
+      "example_descriptions": [
+        "EDINBURGH HOTEL AND MITCHAM"
+      ]
+    },
+    "hung fong": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:34:59.122539",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.736373",
+      "example_descriptions": [
+        "HUNG FONG VIC PTY LTD MELBOURNE"
+      ]
+    },
+    "hellofresh au": {
+      "category": "INC-007",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:00.388069",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.752107",
+      "example_descriptions": [
+        "HELLOFRESH AU Chippendale"
+      ]
+    },
+    "otr belair": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:02.289234",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.754159",
+      "example_descriptions": [
+        "OTR BELAIR BELAIR"
+      ]
+    },
+    "sq green": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:03.868063",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:32.057171",
+      "example_descriptions": [
+        "SQ *GREEN & GRILLED Adelaide"
+      ]
+    },
+    "hair chadstone": {
+      "category": "EXP-027",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:06.474997",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.763818",
+      "example_descriptions": [
+        "HAIR CHADSTONE PTY LTD CHADSTONE"
+      ]
+    },
+    "reddy express": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:07.627865",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.789634",
+      "example_descriptions": [
+        "Reddy Express 6779 Altona North"
+      ]
+    },
+    "ritchies stores": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:09.498929",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.791814",
+      "example_descriptions": [
+        "RITCHIES STORES PTY HAWTHORN"
+      ]
+    },
+    "guzman y": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:11.010223",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.798180",
+      "example_descriptions": [
+        "Guzman y Gomez Hawtho Hawthorn"
+      ]
+    },
+    "mister minh": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:12.857784",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.802430",
+      "example_descriptions": [
+        "Mister Minh Richmond"
+      ]
+    },
+    "love bali": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:14.034177",
+      "usage_count": 19,
+      "last_used": "2025-12-23T19:27:24.098207",
+      "example_descriptions": [
+        "LOVE BALI 809545 DENPASAR"
+      ]
+    },
+    "pt finnet": {
+      "category": "EXP-036",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:15.706406",
+      "usage_count": 31,
+      "last_used": "2025-12-23T19:08:33.528804",
+      "example_descriptions": [
+        "PT FINNET INDONESIA Jakarta"
+      ]
+    },
+    "finpay e": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:17.047176",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.810949",
+      "example_descriptions": [
+        "FINPAY*E-VISA IDN JAKARTA"
+      ]
+    },
+    "kmart 1163": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:18.758037",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.818029",
+      "example_descriptions": [
+        "KMART 1163 RICHMOND"
+      ]
+    },
+    "theartcentre": {
+      "category": "EXP-012",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:19.931553",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.837786",
+      "example_descriptions": [
+        "TheArtCentre MELBOURNE"
+      ]
+    },
+    "meat on": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:21.085010",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.842176",
+      "example_descriptions": [
+        "MEAT ON CHIFLEY PTY LT PRESTON"
+      ]
+    },
+    "sp care": {
+      "category": "EXP-027",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:22.332233",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.872229",
+      "example_descriptions": [
+        "SP CARE & BLOOM NANCY SHEUNG WAN"
+      ]
+    },
+    "melbhp com": {
+      "category": "EXP-012",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:24.615052",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.885411",
+      "example_descriptions": [
+        "MELBHP.COM.AU ST KILDA"
+      ]
+    },
+    "macpac": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:25.715367",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.892031",
+      "example_descriptions": [
+        "MACPAC ADELAIDE ADELAIDE"
+      ]
+    },
+    "chargeback debit": {
+      "category": "EXP-009",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:27.004128",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.925777",
+      "example_descriptions": [
+        "CHARGEBACK DEBIT ADJ"
+      ]
+    },
+    "provence kitchen": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:28.370842",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:24.105773",
+      "example_descriptions": [
+        "PROVENCE KITCHEN HAWTHORN"
+      ]
+    },
+    "news pty": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:29.558896",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.946340",
+      "example_descriptions": [
+        "NEWS PTY LIMITED SURRY HILLS"
+      ]
+    },
+    "autobarn edwardstown": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:30.707727",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.950970",
+      "example_descriptions": [
+        "AUTOBARN EDWARDSTOWN EDWARDSTOWN"
+      ]
+    },
+    "bounty of": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:32.010035",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.953046",
+      "example_descriptions": [
+        "Bounty of the Sun Balaclava"
+      ]
+    },
+    "repco mitchell": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:33.335965",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.955127",
+      "example_descriptions": [
+        "REPCO MITCHELL PARK"
+      ]
+    },
+    "zlr richmond": {
+      "category": "EXP-052",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:34.741164",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.960003",
+      "example_descriptions": [
+        "ZLR*richmond Reservoir"
+      ]
+    },
+    "sq s": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:36.372898",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.962213",
+      "example_descriptions": [
+        "SQ *S & S FLOWERS Oakleigh"
+      ]
+    },
+    "dry july": {
+      "category": "EXP-010",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:37.958508",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.966873",
+      "example_descriptions": [
+        "DRY JULY FOUNDATION MILSONS POINT"
+      ]
+    },
+    "spring osteo": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:39.175235",
+      "usage_count": 7,
+      "last_used": "2025-12-23T19:08:33.528522",
+      "example_descriptions": [
+        "SPRING OSTEO CLINIC P/L SURREY HILLS"
+      ]
+    },
+    "airport air": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:40.390035",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.983072",
+      "example_descriptions": [
+        "Melbourne Airport Melbourne Air"
+      ]
+    },
+    "lotte travel": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:41.911283",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.987938",
+      "example_descriptions": [
+        "LOTTE TRAVEL RETAIL MELBOURNE AIR"
+      ]
+    },
+    "yangyeom food": {
+      "category": "EXP-008",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:43.199814",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:23.990353",
+      "example_descriptions": [
+        "YANGYEOM - FOOD GLR BADUNG - BALI"
+      ]
+    },
+    "gopay gojek": {
+      "category": "EXP-024",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:44.534674",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:23.999272",
+      "example_descriptions": [
+        "Gopay-Gojek DKI Jakarta"
+      ]
+    },
+    "budgetpetprodu molendinar": {
+      "category": "EXP-028",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:45.852000",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.006233",
+      "example_descriptions": [
+        "6995325*BUDGETPETPRODU MOLENDINAR"
+      ]
+    },
+    "fastcourier com": {
+      "category": "EXP-024",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:47.172516",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.008385",
+      "example_descriptions": [
+        "FASTCOURIER.COM.AU NORTH SYDNEY"
+      ]
+    },
+    "ayodya resort": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:48.323061",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:32.058806",
+      "example_descriptions": [
+        "AYODYA RESORT BALI Badung (Kab)"
+      ]
+    },
+    "aster apartment": {
+      "category": "EXP-030",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:50.530219",
+      "usage_count": 19,
+      "last_used": "2025-12-23T19:27:24.045281",
+      "example_descriptions": [
+        "ASTER APARTMENT BALI BADUNG"
+      ]
+    },
+    "ebikes bali": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:51.760852",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.040605",
+      "example_descriptions": [
+        "EBIKES BALI MBL GIANYAR - BAL"
+      ]
+    },
+    "aelia duty": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:54.225956",
+      "usage_count": 14,
+      "last_used": "2025-12-23T19:27:24.071047",
+      "example_descriptions": [
+        "AELIA DUTY FREE DEPARTUREADELAIDE AIRP"
+      ]
+    },
+    "adl grounds": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:55.356067",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.068848",
+      "example_descriptions": [
+        "ADL GROUNDS BAR MELBOURNE AIR"
+      ]
+    },
+    "travel money": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:56.440617",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.073256",
+      "example_descriptions": [
+        "Travel Money Oz Camberwell"
+      ]
+    },
+    "airport pharmacy": {
+      "category": "EXP-018",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:57.641370",
+      "usage_count": 9,
+      "last_used": "2025-12-23T19:27:24.077942",
+      "example_descriptions": [
+        "AIRPORT PHARMACY ADELAIDE AIRP"
+      ]
+    },
+    "mmm auto": {
+      "category": "EXP-002",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:35:58.846776",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.080684",
+      "example_descriptions": [
+        "MMM AUTO CENTRE PL CRAIGIEBURN"
+      ]
+    },
+    "airport tullamarine": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:00.502202",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.083237",
+      "example_descriptions": [
+        "MELBOURNE AIRPORT TULLAMARINE"
+      ]
+    },
+    "ts marrybrown": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:02.057676",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:24.088181",
+      "example_descriptions": [
+        "TS/Marrybrown Burwood Victoria"
+      ]
+    },
+    "hotel at": {
+      "category": "EXP-038",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:03.897198",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:08:32.059372",
+      "example_descriptions": [
+        "Hotel at Booking.com Sydney"
+      ]
+    },
+    "japanese gourmet": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:06.209225",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.530102",
+      "example_descriptions": [
+        "JAPANESE GOURMET KEN PTY CAMBERWELL"
+      ]
+    },
+    "harvey norman": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:07.492611",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.534003",
+      "example_descriptions": [
+        "HARVEY NORMAN AV/IT CHADSTONE"
+      ]
+    },
+    "belair fine": {
+      "category": "EXP-051",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:08.881878",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.550871",
+      "example_descriptions": [
+        "BELAIR FINE WINES BELAIR"
+      ]
+    },
+    "banana boogie": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:10.223143",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.554134",
+      "example_descriptions": [
+        "BANANA BOOGIE BELAIR"
+      ]
+    },
+    "hanaro trading": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:11.926969",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.557498",
+      "example_descriptions": [
+        "HANARO TRADING PL CHADSTONE"
+      ]
+    },
+    "dispute item": {
+      "category": "EXP-065",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T18:36:13.540611",
+      "usage_count": 4,
+      "last_used": "2025-12-23T19:27:25.567383",
+      "example_descriptions": [
+        "DISPUTE ITEM RESOLVED - $50.00"
+      ]
+    },
+    "myki holmesgln": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:28.725671",
+      "usage_count": 21,
+      "last_used": "2025-12-23T19:07:43.506083",
+      "example_descriptions": [
+        "MYKI HOLMESGLN RS HOL MALVERN EAST"
+      ]
+    },
+    "better choice": {
+      "category": "EXP-041",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:31.865844",
+      "usage_count": 43,
+      "last_used": "2025-12-23T19:07:43.508855",
+      "example_descriptions": [
+        "BETTER CHOICE BURWOOD BURWOOD"
+      ]
+    },
+    "cash transfer": {
+      "category": "INC-007",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:32.970476",
+      "usage_count": 115,
+      "last_used": "2025-12-23T19:27:24.111030",
+      "example_descriptions": [
+        "CASH/TRANSFER PAYMENT - THANK YOU"
+      ]
+    },
+    "cwh gardens": {
+      "category": "EXP-019",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:35.216501",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:27:20.876313",
+      "example_descriptions": [
+        "CWH VICTORIA GARDENS SC RICHMOND"
+      ]
+    },
+    "the trustee": {
+      "category": "EXP-031",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:37.797478",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:27:23.392794",
+      "example_descriptions": [
+        "THE TRUSTEE FOR MACE D HAWTHORN"
+      ]
+    },
+    "post ashwood": {
+      "category": "EXP-008",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:39.306578",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:27:23.692449",
+      "example_descriptions": [
+        "POST ASHWOOD LPO ASHWOOD"
+      ]
+    },
+    "whsmith badung": {
+      "category": "EXP-016",
+      "confidence": 0.9,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:06:41.151243",
+      "usage_count": 3,
+      "last_used": "2025-12-23T19:27:24.013110",
+      "example_descriptions": [
+        "WHSMITH BADUNG"
+      ]
+    },
+    "speedo australia": {
+      "category": "EXP-031",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:08:25.320702",
+      "usage_count": 1,
+      "last_used": "2025-12-23T19:27:20.808895",
+      "example_descriptions": [
+        "Speedo Australia Waterloo"
+      ]
+    },
+    "iga": {
+      "category": "EXP-016",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:08:26.530605",
+      "usage_count": 7,
+      "last_used": "2025-12-23T19:27:25.560802",
+      "example_descriptions": [
+        "IGA X-PRESS PLUS LIQ MELBOURNE"
+      ]
+    },
+    "cursor ai": {
+      "category": "EXP-035",
+      "confidence": 0.95,
+      "source": "claude",
+      "learned_at": "2025-12-23T19:08:32.053870",
+      "usage_count": 1,
+      "last_used": "2025-12-23T19:27:23.578203",
+      "example_descriptions": [
+        "CURSOR, AI POWERED IDE CURSOR.COM NY"
+      ]
+    }
+  },
+  "metadata": {
+    "total_patterns": 263,
+    "last_updated": "2025-12-23T19:27:25.570415",
+    "claude_calls_saved": 3184,
+    "total_lookups": 3467,
+    "total_hits": 3184
+  }
+}

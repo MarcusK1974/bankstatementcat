@@ -151,10 +151,20 @@ class ClaudeCategorizer:
         """Build the prompt for Claude."""
         
         # Base prompt with taxonomy
-        prompt = f"""Analyze this bank transaction and categorize it into the most appropriate BASIQ code.
+        prompt = f"""Analyze this Australian bank transaction and categorize it into the most appropriate BASIQ code.
 
 BASIQ Category Taxonomy:
 {self.basiq_categories}
+
+Australian Brand Knowledge (use this to improve accuracy):
+- Supermarkets: Woolworths, Coles, ALDI, IGA → EXP-016 (Groceries)
+- Alcohol Retailers: Dan Murphy's, BWS, Liquorland, First Choice → EXP-051 (Alcohol and Tobacco)
+- Fuel Stations: Caltex, Shell, BP, 7-Eleven, Ampol, Better Choice, United, Liberty → EXP-041 (Vehicle and Transport)
+- Public Transport: MYKI (VIC), Opal (NSW), Go Card (QLD) → EXP-041 (Vehicle and Transport)
+- Telecommunications: Telstra, Optus, Vodafone, TPG → EXP-036 (Telecommunication)
+- Energy/Utilities: AGL, Origin, Momentum Energy, Red Energy → EXP-040 (Utilities)
+- Health Insurance: Bupa, Medibank, HCF, NIB → EXP-021 (Insurance)
+- Banks: NAB, CBA, Westpac, ANZ → Use for fee categorization
 
 Transaction Details:
 - Description: {description}
@@ -185,7 +195,11 @@ Return your categorization as valid JSON (no markdown, just JSON):
   "reasoning": "Brief explanation"
 }
 
-Be consistent with previous decisions for the same merchant. Use high confidence (0.95+) only when certain."""
+Important:
+- Match Australian merchants to their correct categories using the brand knowledge above
+- Be consistent with previous decisions for the same merchant
+- Use high confidence (0.95+) only when certain
+- Ignore location names in descriptions (e.g., suburb names like "BURWOOD", "CHADSTONE")"""
         
         return prompt
     

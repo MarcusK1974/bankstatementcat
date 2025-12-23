@@ -150,12 +150,169 @@ class LLMCategorizer:
         3. Using amount sign and magnitude
         4. Applying domain knowledge
         """
+        import re
+        
         desc_lower = description.lower()
         
+        # ====================================================================
+        # PAYMENT SYSTEM PATTERNS (check first - helps identify small businesses)
+        # ====================================================================
+        
+        # Square payments - usually small businesses
+        if desc_lower.startswith('sq *') or ' sq *' in desc_lower:
+            # Try to infer from context
+            if any(word in desc_lower for word in ['coffee', 'cafe', 'espresso', 'barista']):
+                return 'EXP-008', 0.95, 'Small business cafe (Square payment)'
+            elif any(word in desc_lower for word in ['bakery', 'bread', 'pastry']):
+                return 'EXP-008', 0.95, 'Small business bakery (Square payment)'
+            elif any(word in desc_lower for word in ['restaurant', 'kitchen', 'grill', 'burger']):
+                return 'EXP-008', 0.95, 'Small business restaurant (Square payment)'
+            # Otherwise let it fall through to other rules
+        
+        # Ezidebit - usually subscriptions/memberships
+        if desc_lower.startswith('ezi*') or desc_lower.startswith('ezidebit'):
+            if any(word in desc_lower for word in ['gym', 'fitness']):
+                return 'EXP-017', 0.95, 'Gym membership (Ezidebit)'
+            elif any(word in desc_lower for word in ['ortho', 'dental', 'medical', 'physio']):
+                return 'EXP-018', 0.95, 'Medical subscription (Ezidebit)'
+        
+        # Zeller payments - usually small businesses
+        if desc_lower.startswith('zlr*'):
+            if any(word in desc_lower for word in ['hotel', 'motel', 'inn', 'resort']):
+                return 'EXP-038', 0.95, 'Accommodation (Zeller payment)'
+            elif any(word in desc_lower for word in ['cafe', 'coffee', 'restaurant']):
+                return 'EXP-008', 0.95, 'Dining (Zeller payment)'
+        
+        # Stripe payments
+        if desc_lower.startswith('sp *') or desc_lower.startswith('stripe'):
+            # Usually online services, let other rules handle
+            pass
+        
+        # ====================================================================
+        # KEYWORD PATTERNS (business type inference)
+        # ====================================================================
+        
+        # Medical/Healthcare keywords
+        if any(word in desc_lower for word in ['ortho', 'orthodont', 'dental', 'dentist']):
+            return 'EXP-018', 0.96, 'Dental/orthodontic from description'
+        
+        if any(word in desc_lower for word in ['physio', 'physiotherapy', 'chiro', 'osteo']):
+            return 'EXP-018', 0.95, 'Allied health from description'
+        
+        if any(word in desc_lower for word in ['medical centre', 'medical center', 'clinic', 'doctor']):
+            return 'EXP-018', 0.95, 'Medical practice from description'
+        
+        # Education keywords
+        if any(word in desc_lower for word in [' uni ', 'university', 'tafe', 'college']):
+            if 'fee' in desc_lower or 'payment' in desc_lower or 'tuition' in desc_lower:
+                return 'EXP-011', 0.97, 'University/education fees'
+        
+        if any(word in desc_lower for word in ['childcare', 'child care', 'kindergarten', 'kindy', 'preschool']):
+            return 'EXP-011', 0.96, 'Childcare from description'
+        
+        # Accommodation
+        if any(word in desc_lower for word in ['hotel', 'motel', 'inn', 'resort', 'accommodation']):
+            if 'bottle' not in desc_lower:  # Avoid "Bottle-O Hotel"
+                return 'EXP-038', 0.95, 'Accommodation from description'
+        
+        # Real Estate/Rent
+        if any(word in desc_lower for word in ['real estate', 'realestate', 'property manag']):
+            return 'EXP-030', 0.96, 'Rent payment to real estate agent'
+        
+        # Warehouse stores (home improvement/retail)
+        if 'warehouse' in desc_lower:
+            if any(word in desc_lower for word in ['chemist', 'pharmacy']):
+                return 'EXP-018', 0.97, 'Chemist Warehouse'
+            elif any(word in desc_lower for word in ['pet', 'animal']):
+                return 'EXP-028', 0.96, 'Pet warehouse'
+            elif any(word in desc_lower for word in ['kitchen', 'home']):
+                return 'EXP-019', 0.95, 'Home/kitchen warehouse'
+            else:
+                return 'EXP-031', 0.93, 'Warehouse retail store'
+        
+        # Government/Council
+        if any(word in desc_lower for word in ['council', 'shire', 'city of']):
+            return 'EXP-015', 0.96, 'Council rates/fees'
+        
+        if any(word in desc_lower for word in ['vicroads', 'rta nsw', 'service nsw', 'qld transport']):
+            return 'EXP-015', 0.97, 'State government service'
+        
+        # Banks (for fees/interest)
+        if any(word in desc_lower for word in ['interest charge', 'debit interest', 'interest fee']):
+            return 'EXP-006', 0.96, 'Bank interest charge'
+        
         # High-confidence keyword matches
+        # NOTE: Order matters! Specific brands before generic keywords
         keyword_rules = [
-            # Utilities
-            (['energy', 'electricity', 'gas', 'water', 'power'], 'EXP-040', 0.95, 'utility company'),
+            # Groceries (CHECK FIRST - before generic keywords like 'gas' in suburbs)
+            (['woolworths', 'coles', 'aldi'], 'EXP-016', 0.97, 'supermarket'),
+            
+            # Alcohol (CHECK BEFORE groceries - Dan Murphy's, BWS etc)
+            (['dan murphy', 'bws', 'liquorland', 'first choice liquor'], 'EXP-051', 0.98, 'alcohol retailer'),
+            
+            # ================================================================
+            # CRITICAL FINANCIAL INSTITUTIONS (mortgages, loans, credit cards)
+            # ================================================================
+            
+            # Big 4 Banks
+            (['commonwealth bank', 'commbank', 'cba '], 'EXP-056', 0.98, 'CBA mortgage/loan'),
+            (['westpac '], 'EXP-056', 0.98, 'Westpac mortgage/loan'),
+            (['anz bank', 'anz australia', ' anz '], 'EXP-056', 0.98, 'ANZ mortgage/loan'),
+            
+            # Major Banks & Lenders
+            (['macquarie bank', 'macquarie '], 'EXP-056', 0.97, 'Macquarie Bank'),
+            (['ing bank', 'ing direct'], 'EXP-056', 0.97, 'ING Bank'),
+            (['bankwest'], 'EXP-056', 0.97, 'Bankwest'),
+            (['st george bank', 'st.george'], 'EXP-056', 0.97, 'St George Bank'),
+            (['bank of melbourne'], 'EXP-056', 0.97, 'Bank of Melbourne'),
+            (['bank of queensland', ' boq '], 'EXP-056', 0.97, 'Bank of Queensland'),
+            (['suncorp bank'], 'EXP-056', 0.96, 'Suncorp Bank'),
+            (['amp bank'], 'EXP-056', 0.96, 'AMP Bank'),
+            (['bendigo bank'], 'EXP-056', 0.96, 'Bendigo Bank'),
+            
+            # Non-bank lenders
+            (['latitude', 'latitude financial'], 'EXP-057', 0.96, 'Latitude Financial'),
+            (['pepper money'], 'EXP-057', 0.96, 'Pepper Money'),
+            (['wisr '], 'EXP-057', 0.95, 'Wisr loans'),
+            (['harmoney'], 'EXP-057', 0.95, 'Harmoney loans'),
+            (['plenti'], 'EXP-057', 0.95, 'Plenti loans'),
+            
+            # ================================================================
+            # MAJOR REAL ESTATE AGENTS (rent payments)
+            # ================================================================
+            
+            (['ray white'], 'EXP-030', 0.98, 'Ray White real estate'),
+            (['lj hooker'], 'EXP-030', 0.98, 'LJ Hooker real estate'),
+            (['century 21'], 'EXP-030', 0.97, 'Century 21 real estate'),
+            (['harcourts'], 'EXP-030', 0.97, 'Harcourts real estate'),
+            (['mcgrath'], 'EXP-030', 0.97, 'McGrath real estate'),
+            (['belle property'], 'EXP-030', 0.97, 'Belle Property'),
+            (['first national real'], 'EXP-030', 0.96, 'First National real estate'),
+            (['prd nationwide', 'prd real'], 'EXP-030', 0.96, 'PRD Nationwide'),
+            (['jellis craig'], 'EXP-030', 0.96, 'Jellis Craig'),
+            (['barry plant'], 'EXP-030', 0.96, 'Barry Plant real estate'),
+            
+            # ================================================================
+            # EDUCATION & CHILDCARE (high frequency)
+            # ================================================================
+            
+            (['goodstart'], 'EXP-011', 0.97, 'Goodstart Early Learning'),
+            (['g8 education'], 'EXP-011', 0.97, 'G8 Education childcare'),
+            (['ku children', 'ku childcare'], 'EXP-011', 0.97, 'KU childcare'),
+            (['guardian childcare'], 'EXP-011', 0.96, 'Guardian Childcare'),
+            (['affinity education'], 'EXP-011', 0.96, 'Affinity Education'),
+            
+            # ================================================================
+            # Public Transport (Australian ticketing systems)
+            # ================================================================
+            
+            (['myki', 'opal card', 'go card'], 'EXP-041', 0.98, 'public transport card'),
+            
+            # Fuel (specific brands)
+            (['caltex', 'shell', 'bp', '7-eleven', 'ampol', 'better choice', 'united petroleum', 'liberty'], 'EXP-041', 0.96, 'fuel station'),
+            
+            # Utilities (generic keywords - AFTER specific brands)
+            # NOTE: Using word boundaries to avoid matching 'gas' in 'Warrigashwood'
             (['momentum energy', 'origin energy', 'agl', 'red energy'], 'EXP-040', 0.98, 'energy provider'),
             
             # Insurance
@@ -181,15 +338,9 @@ class LLMCategorizer:
             # Subscriptions
             (['netflix', 'spotify', 'disney', 'stan', 'hulu', 'amazon prime'], 'EXP-035', 0.97, 'streaming subscription'),
             
-            # Groceries
-            (['woolworths', 'coles', 'aldi', 'iga'], 'EXP-016', 0.97, 'supermarket'),
-            
             # Dining
             (['kfc', 'mcdonalds', 'hungry jacks', 'subway', 'pizza'], 'EXP-008', 0.95, 'fast food'),
             (['restaurant', 'cafe', 'coffee'], 'EXP-008', 0.90, 'dining'),
-            
-            # Fuel
-            (['caltex', 'shell', 'bp', '7-eleven', 'ampol'], 'EXP-041', 0.96, 'fuel station'),
             
             # Mortgage/Loans
             (['unloan', 'mortgage', 'home loan'], 'EXP-056', 0.96, 'mortgage payment'),
@@ -205,6 +356,14 @@ class LLMCategorizer:
         for keywords, category, conf, reason in keyword_rules:
             if any(kw in desc_lower for kw in keywords):
                 return category, conf, f"Matched {reason} from description"
+        
+        # Check utilities with word boundaries (separate to avoid suburb name issues)
+        utility_words = ['energy', 'electricity', 'gas', 'water', 'power']
+        for word in utility_words:
+            # Use word boundary to match whole words only
+            pattern = r'\b' + re.escape(word) + r'\b'
+            if re.search(pattern, desc_lower):
+                return 'EXP-040', 0.95, f"Matched utility company from description"
         
         # Check BS category with higher confidence if we trust it
         if bs_category:
