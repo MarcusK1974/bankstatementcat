@@ -20,3 +20,11 @@ __pycache__/
 
 # Temporary files
 ~$*
+
+# Personal/sensitive data (NEVER commit)
+cardmok.csv
+**/Bank Statements/**
+**/bank*statement*.csv
+NQYF*.csv
+marcus_*.csv
+nab_*.csv
