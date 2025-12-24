@@ -1,0 +1,88 @@
+# Expense Classification for HEM-based Metrics
+# Based on Melbourne Institute Household Expenditure Measure principles
+
+# Non-discretionary (essential living expenses)
+non_discretionary:
+  - EXP-016  # Groceries
+  - EXP-036  # Telecommunication
+  - EXP-040  # Utilities
+  - EXP-030  # Rent
+  - EXP-056  # Mortgage Repayments
+  - EXP-018  # Medical
+  - EXP-011  # Education and Childcare
+  - EXP-021  # Insurance
+  - EXP-041  # Vehicle and Transport (essential)
+  - EXP-002  # Automotive (essential maintenance)
+  - EXP-015  # Government & Council Services
+
+# Discretionary (lifestyle/non-essential)
+discretionary:
+  - EXP-008  # Dining Out
+  - EXP-012  # Entertainment
+  - EXP-014  # Gambling
+  - EXP-017  # Gyms and memberships
+  - EXP-027  # Personal Care
+  - EXP-031  # Retail
+  - EXP-051  # Alcohol and Tobacco
+  - EXP-052  # Sports and Hobbies
+  - EXP-038  # Travel
+  - EXP-035  # Subscriptions
+  - EXP-055  # Clothing and Footwear
+  - EXP-007  # Department Stores
+  - EXP-024  # Online Retail
+  - EXP-010  # Donations
+  - EXP-043  # Charities
+  - EXP-019  # Home Improvement
+  - EXP-028  # Pet Care
+  - EXP-004  # Childrens Retail and Gaming
+
+# Other expenses (not discretionary or non-discretionary, excluded from both)
+other_expenses:
+  - EXP-001  # ATM Withdrawals
+  - EXP-003  # Cash Advances
+  - EXP-005  # Collection Agencies
+  - EXP-006  # Debt Interest Accrual
+  - EXP-009  # Dishonours
+  - EXP-013  # External Transfers
+  - EXP-020  # Insolvency
+  - EXP-023  # Motor Finance
+  - EXP-025  # Other Finance
+  - EXP-026  # Peer to Peer Finance
+  - EXP-029  # Redraws
+  - EXP-032  # Returns & Refunds
+  - EXP-033  # Small Amount Lending
+  - EXP-034  # Superannuation
+  - EXP-039  # Uncategorised Debits
+  - EXP-054  # Other Categorised
+  - EXP-057  # Loan Repayments
+  - EXP-058  # Mortgage Transfers
+  - EXP-061  # Credit Card Repayments
+  - EXP-062  # Credit Card Transfers
+  - EXP-063  # Loan Transfers
+  - EXP-064  # Crypto Exchange
+  - EXP-065  # Dishonour Refunds
+
+# Liabilities (excluded from outgoings for ME039)
+liabilities:
+  - EXP-056  # Mortgage Repayments
+  - EXP-057  # Loan Repayments
+  - EXP-061  # Credit Card Repayments
+  - EXP-023  # Motor Finance
+  - EXP-033  # Small Amount Lending
+
+# High-cost lenders (for ME027 - Has High-Cost Finance)
+high_cost_lenders:
+  - EXP-025  # Other Finance
+  - EXP-026  # Peer to Peer Finance
+  - EXP-033  # Small Amount Lending (SACC/BNPL)
+
+# Lender categories (for ME008, ME009, ME046)
+lender_categories:
+  - EXP-023  # Motor Finance
+  - EXP-025  # Other Finance
+  - EXP-026  # Peer to Peer Finance
+  - EXP-033  # Small Amount Lending
+  - EXP-056  # Mortgage Repayments
+  - EXP-057  # Loan Repayments
+  - EXP-061  # Credit Card Repayments
+

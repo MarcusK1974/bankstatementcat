@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """
-Final Simplified Transaction Categorizer
+Final Simplified Transaction Categorizer with Smart Direction-Aware Logic
 
-4-Step Categorization Flow:
+5-Step Categorization Flow:
 1. Normalize Description (strip transaction types)
 2. Check Internal Transfer
-3. Check Comprehensive Brand Database (96-98% coverage, FREE)
-4. Claude Validates BS Category or Categorizes (2-4% of transactions)
+3. For POSITIVE transactions: Check Income Keywords FIRST (prevents "WOOLWORTHS WAGES" → Groceries)
+4. Check Comprehensive Brand Database (96-98% coverage, FREE) with direction filtering
+5. Claude Validates BS Category or Categorizes (2-4% of transactions)
 
-This represents the production-ready system with maximum cost efficiency.
+Key Innovation: Income-type keywords (wages, salary, payment from) WIN over merchant names
+for positive transactions. Only searches EXP-* for negative amounts, INC-* for positive amounts.
+
+This represents the production-ready system with maximum cost efficiency and smart categorization.
 """
 
 import os
@@ -24,6 +28,7 @@ from transformer.config.australian_brands_comprehensive import get_category
 from transformer.inference.transaction_normalizer import normalize_description
 from transformer.inference.transfer_detector import InternalTransferDetector
 from transformer.inference.claude_categorizer import ClaudeCategorizer
+from transformer.inference.income_prioritizer import check_income_priority, filter_category_by_direction
 import json
 
 
@@ -87,6 +92,7 @@ class FinalTransactionCategorizer:
         self.stats = {
             'total': 0,
             'internal_transfer': 0,
+            'income_priority': 0,  # Income keywords for positive transactions
             'comprehensive_db_high_conf': 0,  # ≥0.90
             'comprehensive_db_medium_conf': 0,  # 0.80-0.89
             'comprehensive_db_low_conf': 0,  # <0.80
@@ -94,16 +100,17 @@ class FinalTransactionCategorizer:
             'claude_categorization': 0,
             'bs_fallback': 0,
             'uncategorized': 0,
+            'direction_filtered': 0,  # Categories rejected due to wrong direction
         }
     
     def categorize(self, transaction: Dict) -> Tuple[str, float, str]:
         """
-        Categorize a transaction using the 4-step flow.
+        Categorize a transaction using the smart direction-aware flow.
         
         Args:
             transaction: Transaction dict with keys:
                 - description: Raw transaction description
-                - amount: Transaction amount
+                - amount: Transaction amount (CRITICAL: negative=expense, positive=income)
                 - bs_category: Category from bankstatements.com.au (optional)
                 - account_number: Account number (optional, for transfer detection)
                 
@@ -112,6 +119,8 @@ class FinalTransactionCategorizer:
         """
         self.stats['total'] += 1
         
+        amount = transaction.get('amount', 0)
+        
         # Step 1: Normalize Description
         raw_description = transaction.get('description', '')
         normalized, tx_type = normalize_description(raw_description)
@@ -119,7 +128,7 @@ class FinalTransactionCategorizer:
         # Step 2: Check Internal Transfer
         is_internal = self.transfer_detector.is_internal_transfer(
             description=normalized,
-            amount=transaction.get('amount', 0),
+            amount=amount,
             bs_category=transaction.get('bs_category'),
             third_party=transaction.get('third_party')
         )
@@ -128,36 +137,54 @@ class FinalTransactionCategorizer:
             self.stats['internal_transfer'] += 1
             return 'INTERNAL_TRANSFER', 1.0, 'internal_transfer'
         
-        # Step 3: Check Comprehensive Brand Database
+        # Step 3: For POSITIVE transactions, check income keywords FIRST
+        # This prevents "WOOLWORTHS WAGES" from matching Groceries instead of Salary
+        if amount > 0:
+            income_result = check_income_priority(normalized)
+            if income_result:
+                category, confidence, reason = income_result
+                self.stats['income_priority'] += 1
+                return category, confidence, f'income_priority:{reason}'
+        
+        # Step 4: Check Comprehensive Brand Database
+        # For positive transactions, only accept INC-* categories or EXP-032 (refunds)
+        # For negative transactions, only accept EXP-* categories
         db_category, db_confidence, db_reason = get_category(normalized)
         
         if db_category:
-            # High confidence - use directly
-            if db_confidence >= self.db_threshold:
-                self.stats['comprehensive_db_high_conf'] += 1
-                return db_category, db_confidence, f'comprehensive_db:{db_reason}'
-            
-            # Medium confidence - might validate with Claude if available
-            elif db_confidence >= 0.80:
-                self.stats['comprehensive_db_medium_conf'] += 1
-                
-                # If Claude available, validate against BS category
-                bs_category = transaction.get('bs_category')
-                if self.claude and bs_category:
-                    return self._validate_with_claude(
-                        normalized, transaction, bs_category, 
-                        db_suggestion=(db_category, db_confidence, db_reason)
-                    )
-                
-                # Otherwise, use DB result
-                return db_category, db_confidence, f'comprehensive_db:{db_reason}'
-            
-            # Low confidence - prefer Claude or BS fallback
+            # Validate category matches transaction direction
+            if not filter_category_by_direction(db_category, amount):
+                # Wrong direction - e.g., "WOOLWORTHS" (merchant) matched EXP-016 
+                # but transaction is positive (income), so skip this match
+                self.stats['direction_filtered'] += 1
+                db_category = None  # Clear the match and continue
             else:
-                self.stats['comprehensive_db_low_conf'] += 1
-                # Continue to Step 4
+                # High confidence - use directly
+                if db_confidence >= self.db_threshold:
+                    self.stats['comprehensive_db_high_conf'] += 1
+                    return db_category, db_confidence, f'comprehensive_db:{db_reason}'
+                
+                # Medium confidence - might validate with Claude if available
+                elif db_confidence >= 0.80:
+                    self.stats['comprehensive_db_medium_conf'] += 1
+                    
+                    # If Claude available, validate against BS category
+                    bs_category = transaction.get('bs_category')
+                    if self.claude and bs_category:
+                        return self._validate_with_claude(
+                            normalized, transaction, bs_category, 
+                            db_suggestion=(db_category, db_confidence, db_reason)
+                        )
+                    
+                    # Otherwise, use DB result
+                    return db_category, db_confidence, f'comprehensive_db:{db_reason}'
+                
+                # Low confidence - prefer Claude or BS fallback
+                else:
+                    self.stats['comprehensive_db_low_conf'] += 1
+                    # Continue to Step 5
         
-        # Step 4: Check BS Category - Use if Clear, Claude if Vague
+        # Step 5: Check BS Category - Use if Clear, Claude if Vague
         bs_category = transaction.get('bs_category')
         
         if bs_category:
@@ -174,30 +201,30 @@ class FinalTransactionCategorizer:
             if bs_category in VAGUE_BS_CATEGORIES:
                 if self.claude:
                     self.stats['claude_categorization'] += 1
-                    return self._categorize_with_claude(normalized, transaction)
+                    return self._categorize_with_claude(transaction, normalized)
                 else:
                     # No Claude - have to fall back to uncategorized
                     self.stats['uncategorized'] += 1
-                    amount = transaction.get('amount', 0)
                     if amount < 0:
                         return 'EXP-039', 0.3, 'uncategorized_fallback'
                     else:
                         return 'INC-007', 0.3, 'uncategorized_fallback'
             
-            # BS category is clear and mappable - use it directly
+            # BS category is clear and mappable - validate direction
             if bs_category in self.bs_mappings:
-                self.stats['bs_fallback'] += 1
                 mapped_category, mapped_conf = self.bs_mappings[bs_category]
-                return mapped_category, mapped_conf, 'bs_fallback'
+                # Check if category matches transaction direction
+                if filter_category_by_direction(mapped_category, amount):
+                    self.stats['bs_fallback'] += 1
+                    return mapped_category, mapped_conf, 'bs_fallback'
         
         # No BS category at all - try Claude or fall back to uncategorized
         if self.claude:
             self.stats['claude_categorization'] += 1
-            return self._categorize_with_claude(normalized, transaction)
+            return self._categorize_with_claude(transaction, normalized)
         
         # Last resort - uncategorized
         self.stats['uncategorized'] += 1
-        amount = transaction.get('amount', 0)
         if amount < 0:
             return 'EXP-039', 0.3, 'uncategorized_fallback'
         else:

@@ -1,0 +1,75 @@
+# Metrics Calculation Configuration
+
+# Reporting period
+reporting_period_days: 180  # 6 months standard
+
+# Stability thresholds
+stability_threshold_pct: 0.10  # 10% variance allowed for "stable"
+recent_months: 2  # For detecting recent changes (ME022)
+minimum_frequency_count: 3  # Minimum occurrences to detect frequency pattern
+
+# Calendar month normalization
+days_per_month: 30  # Normalize to 30-day months for comparisons
+fortnightly_payments_per_month: 2.17  # 26 payments per year / 12 months
+
+# Income groups for ME033 (Average Income monthly) - SALARY ONLY
+salary_income_groups:
+  - INC-009  # Salary
+
+# Income groups for ME040 (Average Monthly Credits) - ALL INCOME
+all_income_groups:
+  - INC-001  # Benefits
+  - INC-002  # Child Support Income
+  - INC-003  # Insurance Credits
+  - INC-004  # Interest Income
+  - INC-005  # Investment Income
+  - INC-006  # Other Earnings
+  - INC-007  # Other Credits
+  - INC-008  # Rent & Board Income
+  - INC-009  # Salary
+  - INC-010  # Superannuation Credits
+  - INC-011  # Family Tax Benefit & Centrelink Payments
+  - INC-012  # Youth Allowance
+  - INC-013  # Rental Assistance
+  - INC-014  # Centrelink
+  - INC-015  # Medicare
+  - INC-016  # Jobseeker
+  - INC-018  # Pension
+  - INC-019  # Carers
+  - INC-020  # Education
+  - INC-021  # Crisis Support
+
+# Government services (for ME005, ME006, ME007)
+government_services:
+  youth_allowance: INC-012
+  rental_assistance: INC-013
+  other_benefits:
+    - INC-001  # Benefits
+    - INC-011  # Family Tax Benefit
+    - INC-014  # Centrelink
+    - INC-016  # Jobseeker
+    - INC-018  # Pension
+    - INC-019  # Carers
+    - INC-020  # Education
+    - INC-021  # Crisis Support
+
+# High risk activities (for ME020, ME021)
+high_risk_categories:
+  - EXP-001  # ATM Withdrawals
+  - EXP-003  # Cash Advances (from credit cards)
+  - EXP-014  # Gambling
+  - EXP-006  # Debt Interest Accrual (credit card interest)
+  - EXP-029  # Redraws
+
+# Frequency detection patterns (in days)
+frequency_patterns:
+  weekly:
+    min_days: 3
+    max_days: 9
+  fortnightly:
+    min_days: 10
+    max_days: 17
+  monthly:
+    min_days: 25
+    max_days: 35
+
