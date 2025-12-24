@@ -28,3 +28,7 @@ cardmok.csv
 NQYF*.csv
 marcus_*.csv
 nab_*.csv
+
+# Personal bank statement data
+marcus_statements*.csv
+marcus_*.csv

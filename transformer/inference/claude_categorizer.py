@@ -89,6 +89,26 @@ class ClaudeCategorizer:
         
         return '\n'.join(categories)
     
+    def _sanitize_description(self, description: str) -> str:
+        """
+        Sanitize transaction description for safe JSON embedding.
+        
+        Escapes backslashes and other characters that could break JSON parsing.
+        """
+        if not description:
+            return ""
+        
+        # Escape backslashes (must be first to avoid double-escaping)
+        sanitized = description.replace('\\', '\\\\')
+        
+        # Escape quotes
+        sanitized = sanitized.replace('"', '\\"')
+        
+        # Remove control characters that could break JSON
+        sanitized = ''.join(char for char in sanitized if ord(char) >= 32 or char in '\n\r\t')
+        
+        return sanitized
+    
     def predict(
         self,
         description: str,
@@ -150,6 +170,9 @@ class ClaudeCategorizer:
     ) -> str:
         """Build the prompt for Claude."""
         
+        # Sanitize description to prevent JSON parsing errors
+        safe_description = self._sanitize_description(description)
+        
         # Base prompt with taxonomy
         prompt = f"""Analyze this Australian bank transaction and categorize it into the most appropriate BASIQ code.
 
@@ -167,7 +190,7 @@ Australian Brand Knowledge (use this to improve accuracy):
 - Banks: NAB, CBA, Westpac, ANZ → Use for fee categorization
 
 Transaction Details:
-- Description: {description}
+- Description: {safe_description}
 - Amount: ${amount:.2f} ({"expense/debit" if amount < 0 else "income/credit"})
 """
         
